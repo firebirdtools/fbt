@@ -1,0 +1,161 @@
+.TH "CppLogging::Logger" 3 "Thu Jan 17 2019" "CppLogging" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CppLogging::Logger \- \fBLogger\fP interface\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <logger\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLogger\fP ()"
+.br
+.RI "Initialize default logger\&. "
+.ti -1c
+.RI "\fBLogger\fP (const std::string &name)"
+.br
+.RI "Initialize named logger\&. "
+.ti -1c
+.RI "\fBLogger\fP (const \fBLogger\fP &)=default"
+.br
+.ti -1c
+.RI "\fBLogger\fP (\fBLogger\fP &&)=default"
+.br
+.ti -1c
+.RI "\fBLogger\fP & \fBoperator=\fP (const \fBLogger\fP &)=default"
+.br
+.ti -1c
+.RI "\fBLogger\fP & \fBoperator=\fP (\fBLogger\fP &&)=default"
+.br
+.ti -1c
+.RI "template<typename\&.\&.\&. Args> void \fBDebug\fP (const char *debug, const Args &\&.\&.\&. args)"
+.br
+.RI "Log debug message with format arguments\&. "
+.ti -1c
+.RI "template<typename\&.\&.\&. Args> void \fBInfo\fP (const char *info, const Args &\&.\&.\&. args)"
+.br
+.RI "Log information message with format arguments\&. "
+.ti -1c
+.RI "template<typename\&.\&.\&. Args> void \fBWarn\fP (const char *warn, const Args &\&.\&.\&. args)"
+.br
+.RI "Log warning message with format arguments\&. "
+.ti -1c
+.RI "template<typename\&.\&.\&. Args> void \fBError\fP (const char *error, const Args &\&.\&.\&. args)"
+.br
+.RI "Log error message with format arguments\&. "
+.ti -1c
+.RI "template<typename\&.\&.\&. Args> void \fBFatal\fP (const char *fatal, const Args &\&.\&.\&. args)"
+.br
+.RI "Log fatal message with format arguments\&. "
+.ti -1c
+.RI "void \fBFlush\fP ()"
+.br
+.RI "Flush the current logger\&. "
+.ti -1c
+.RI "void \fBUpdate\fP ()"
+.br
+.RI "Update the current logger sink by taking the most recent one from configuration\&. "
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBConfig\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBLogger\fP interface\&. 
+
+\fBLogger\fP is a main interface to produce logging records with a desired level\&.
+.PP
+Thread-safe or not thread-safe depends on the current logging sink\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CppLogging::Logger::Logger (const std::string & name)\fC [explicit]\fP"
+
+.PP
+Initialize named logger\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIname\fP - \fBLogger\fP name 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename\&.\&.\&. Args> void CppLogging::Logger::Debug (const char * debug, const Args &\&.\&.\&. args)"
+
+.PP
+Log debug message with format arguments\&. Will log only in debug mode!
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdebug\fP - Debug message 
+.br
+\fIargs\fP - Format arguments 
+.RE
+.PP
+
+.SS "template<typename\&.\&.\&. Args> void CppLogging::Logger::Error (const char * error, const Args &\&.\&.\&. args)"
+
+.PP
+Log error message with format arguments\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIerror\fP - Error message 
+.br
+\fIargs\fP - Format arguments 
+.RE
+.PP
+
+.SS "template<typename\&.\&.\&. Args> void CppLogging::Logger::Fatal (const char * fatal, const Args &\&.\&.\&. args)"
+
+.PP
+Log fatal message with format arguments\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfatal\fP - Fatal message 
+.br
+\fIargs\fP - Format arguments 
+.RE
+.PP
+
+.SS "template<typename\&.\&.\&. Args> void CppLogging::Logger::Info (const char * info, const Args &\&.\&.\&. args)"
+
+.PP
+Log information message with format arguments\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinfo\fP - Information message 
+.br
+\fIargs\fP - Format arguments 
+.RE
+.PP
+
+.SS "template<typename\&.\&.\&. Args> void CppLogging::Logger::Warn (const char * warn, const Args &\&.\&.\&. args)"
+
+.PP
+Log warning message with format arguments\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwarn\fP - Warning message 
+.br
+\fIargs\fP - Format arguments 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CppLogging from the source code\&.

@@ -1,0 +1,61 @@
+.TH "CppLogging::Filter" 3 "Thu Jan 17 2019" "CppLogging" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CppLogging::Filter \- Logging filter interface\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <filter\&.h>\fP
+.PP
+Inherited by \fBCppLogging::LevelFilter\fP, \fBCppLogging::LoggerFilter\fP, \fBCppLogging::MessageFilter\fP, and \fBCppLogging::Trigger\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual bool \fBFilterRecord\fP (\fBRecord\fP &record)=0"
+.br
+.RI "\fBFilter\fP the given logging record\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Logging filter interface\&. 
+
+Logging filter takes an instance of a single logging record and performs some checks to detect if the record should be filered out and not processed anymore\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBLoggerFilter\fP 
+.PP
+\fBLevelFilter\fP 
+.PP
+\fBMessageFilter\fP 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual bool CppLogging::Filter::FilterRecord (\fBRecord\fP & record)\fC [pure virtual]\fP"
+
+.PP
+\fBFilter\fP the given logging record\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrecord\fP - Logging record 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+'true' if the logging record should be processed, 'false' if the logging record was filtered out 
+.RE
+.PP
+
+.PP
+Implemented in \fBCppLogging::Trigger\fP, \fBCppLogging::LevelFilter\fP, \fBCppLogging::LoggerFilter\fP, and \fBCppLogging::MessageFilter\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CppLogging from the source code\&.

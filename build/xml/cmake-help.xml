@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="cmake-help" kind="page">
+    <compoundname>cmake-help</compoundname>
+    <title>cmake help</title>
+    <innerpage refid="cmake-doc">cmake doc</innerpage>
+    <briefdescription>
+<para>Get started with cmake in matter of minutes. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Get started with cmake in matter of minutes.</para>
+<para><itemizedlist>
+<listitem><para><ref refid="cmake-doc" kindref="compound">cmake doc</ref> </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

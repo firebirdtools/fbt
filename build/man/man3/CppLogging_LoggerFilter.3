@@ -1,0 +1,85 @@
+.TH "CppLogging::LoggerFilter" 3 "Thu Jan 17 2019" "CppLogging" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CppLogging::LoggerFilter \- \fBLogger\fP filter\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <logger_filter\&.h>\fP
+.PP
+Inherits \fBCppLogging::Filter\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLoggerFilter\fP (const std::regex &pattern)"
+.br
+.RI "Initialize logger filter with a given regular expression pattern\&. "
+.ti -1c
+.RI "\fBLoggerFilter\fP (const \fBLoggerFilter\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBLoggerFilter\fP (\fBLoggerFilter\fP &&) noexcept=default"
+.br
+.ti -1c
+.RI "\fBLoggerFilter\fP & \fBoperator=\fP (const \fBLoggerFilter\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBLoggerFilter\fP & \fBoperator=\fP (\fBLoggerFilter\fP &&) noexcept=default"
+.br
+.ti -1c
+.RI "bool \fBFilterRecord\fP (\fBRecord\fP &record) override"
+.br
+.RI "\fBFilter\fP the given logging record\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBLogger\fP filter\&. 
+
+\fBLogger\fP filters out logging records which logger filed is not matched to the given regular expression pattern\&.
+.PP
+Thread-safe\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CppLogging::LoggerFilter::LoggerFilter (const std::regex & pattern)\fC [inline]\fP, \fC [explicit]\fP"
+
+.PP
+Initialize logger filter with a given regular expression pattern\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpattern\fP - Regular expression pattern 
+.RE
+.PP
+
+.PP
+.nf
+32 : _pattern(pattern) {}
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "bool CppLogging::LoggerFilter::FilterRecord (\fBRecord\fP & record)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBFilter\fP the given logging record\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrecord\fP - Logging record 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+'true' if the logging record should be processed, 'false' if the logging record was filtered out 
+.RE
+.PP
+
+.PP
+Implements \fBCppLogging::Filter\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CppLogging from the source code\&.

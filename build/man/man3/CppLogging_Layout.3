@@ -1,0 +1,54 @@
+.TH "CppLogging::Layout" 3 "Thu Jan 17 2019" "CppLogging" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CppLogging::Layout \- Logging layout interface\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <layout\&.h>\fP
+.PP
+Inherited by \fBCppLogging::BinaryLayout\fP, and \fBCppLogging::TextLayout\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBLayoutRecord\fP (\fBRecord\fP &record)=0"
+.br
+.RI "\fBLayout\fP the given logging record into a raw buffer\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Logging layout interface\&. 
+
+Logging layout takes an instance of a single logging record and convert it into a raw buffer (raw filed will be updated)\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBBinaryLayout\fP 
+.PP
+\fBTextLayout\fP 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void CppLogging::Layout::LayoutRecord (\fBRecord\fP & record)\fC [pure virtual]\fP"
+
+.PP
+\fBLayout\fP the given logging record into a raw buffer\&. This method will update the raw filed of the given logging record\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrecord\fP - Logging record 
+.RE
+.PP
+
+.PP
+Implemented in \fBCppLogging::TextLayout\fP, and \fBCppLogging::BinaryLayout\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CppLogging from the source code\&.

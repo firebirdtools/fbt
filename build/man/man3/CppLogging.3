@@ -1,0 +1,222 @@
+.TH "CppLogging" 3 "Thu Jan 17 2019" "CppLogging" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CppLogging \- C++ Logging project definitions\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBAppender\fP"
+.br
+.RI "Logging appender interface\&. "
+.ti -1c
+.RI "class \fBAsyncBuffer\fP"
+.br
+.RI "Asynchronous logging buffer\&. "
+.ti -1c
+.RI "class \fBAsyncProcessor\fP"
+.br
+.RI "Asynchronous logging processor\&. "
+.ti -1c
+.RI "class \fBBinaryLayout\fP"
+.br
+.RI "Binary layout\&. "
+.ti -1c
+.RI "class \fBBufferedProcessor\fP"
+.br
+.RI "Buffered logging processor\&. "
+.ti -1c
+.RI "class \fBConfig\fP"
+.br
+.RI "\fBLogger\fP configuration static class\&. "
+.ti -1c
+.RI "class \fBConsoleAppender\fP"
+.br
+.RI "Console (stdout) appender\&. "
+.ti -1c
+.RI "class \fBDebugAppender\fP"
+.br
+.RI "Debug appender\&. "
+.ti -1c
+.RI "class \fBErrorAppender\fP"
+.br
+.RI "Error (stderr) appender\&. "
+.ti -1c
+.RI "class \fBFileAppender\fP"
+.br
+.RI "File appender\&. "
+.ti -1c
+.RI "class \fBFilter\fP"
+.br
+.RI "Logging filter interface\&. "
+.ti -1c
+.RI "class \fBLayout\fP"
+.br
+.RI "Logging layout interface\&. "
+.ti -1c
+.RI "class \fBLevelFilter\fP"
+.br
+.RI "Level filter\&. "
+.ti -1c
+.RI "class \fBLogger\fP"
+.br
+.RI "\fBLogger\fP interface\&. "
+.ti -1c
+.RI "class \fBLoggerFilter\fP"
+.br
+.RI "\fBLogger\fP filter\&. "
+.ti -1c
+.RI "class \fBMemoryAppender\fP"
+.br
+.RI "Memory appender\&. "
+.ti -1c
+.RI "class \fBMessageFilter\fP"
+.br
+.RI "Message filter\&. "
+.ti -1c
+.RI "class \fBNullAppender\fP"
+.br
+.RI "Null appender\&. "
+.ti -1c
+.RI "class \fBOstreamAppender\fP"
+.br
+.RI "Output stream (std::ostream) appender\&. "
+.ti -1c
+.RI "class \fBProcessor\fP"
+.br
+.RI "Logging processor interface\&. "
+.ti -1c
+.RI "class \fBRecord\fP"
+.br
+.RI "Logging record\&. "
+.ti -1c
+.RI "class \fBRollingFileAppender\fP"
+.br
+.RI "Rolling file appender\&. "
+.ti -1c
+.RI "class \fBSyncProcessor\fP"
+.br
+.RI "Synchronous logging processor\&. "
+.ti -1c
+.RI "class \fBSyslogAppender\fP"
+.br
+.RI "Syslog appender\&. "
+.ti -1c
+.RI "class \fBTextLayout\fP"
+.br
+.RI "Text layout\&. "
+.ti -1c
+.RI "class \fBTrigger\fP"
+.br
+.RI "Logging trigger\&. "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBTimeRollingPolicy\fP { \fBTimeRollingPolicy::YEAR\fP, \fBTimeRollingPolicy::MONTH\fP, \fBTimeRollingPolicy::DAY\fP, \fBTimeRollingPolicy::HOUR\fP, \fBTimeRollingPolicy::MINUTE\fP, \fBTimeRollingPolicy::SECOND\fP }"
+.br
+.RI "Time rolling policy\&. "
+.ti -1c
+.RI "enum \fBLevel\fP : uint8_t { \fBLevel::NONE\fP = 0x00, \fBLevel::FATAL\fP = 0x1F, \fBLevel::ERROR\fP = 0x3F, \fBLevel::WARN\fP = 0x7F, \fBLevel::INFO\fP = 0x9F, \fBLevel::DEBUG\fP = 0xBF, \fBLevel::ALL\fP = 0xFF }"
+.br
+.RI "Logging level enumeration\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const char \fBversion\fP [] = '1\&.0\&.0\&.0'"
+.br
+.RI "Project version\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+C++ Logging project definitions\&. 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBCppLogging::Level\fP : uint8_t\fC [strong]\fP"
+
+.PP
+Logging level enumeration\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fINONE \fP\fP
+Log nothing\&. 
+.TP
+\fB\fIFATAL \fP\fP
+Log fatal errors\&. 
+.TP
+\fB\fIERROR \fP\fP
+Log errors\&. 
+.TP
+\fB\fIWARN \fP\fP
+Log warnings\&. 
+.TP
+\fB\fIINFO \fP\fP
+Log information\&. 
+.TP
+\fB\fIDEBUG \fP\fP
+Log debug\&. 
+.TP
+\fB\fIALL \fP\fP
+Log everything\&. 
+.PP
+.nf
+17                  : uint8_t
+18 {
+19     NONE  = 0x00,   
+20     FATAL = 0x1F,   
+21     ERROR = 0x3F,   
+22     WARN  = 0x7F,   
+23     INFO  = 0x9F,   
+24     DEBUG = 0xBF,   
+25     ALL   = 0xFF    
+26 };
+.fi
+.SS "enum \fBCppLogging::TimeRollingPolicy\fP\fC [strong]\fP"
+
+.PP
+Time rolling policy\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIYEAR \fP\fP
+Year rolling policy\&. 
+.TP
+\fB\fIMONTH \fP\fP
+Monthly rolling policy\&. 
+.TP
+\fB\fIDAY \fP\fP
+Daily rolling policy\&. 
+.TP
+\fB\fIHOUR \fP\fP
+Hour rolling policy\&. 
+.TP
+\fB\fIMINUTE \fP\fP
+Minute rolling policy\&. 
+.TP
+\fB\fISECOND \fP\fP
+Second rolling policy\&. 
+.PP
+.nf
+22 {
+23     YEAR,       
+24     MONTH,      
+25     DAY,        
+26     HOUR,       
+27     MINUTE,     
+28     SECOND      
+29 };
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CppLogging from the source code\&.

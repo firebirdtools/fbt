@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="appender_8h" kind="file" language="C++">
+    <compoundname>appender.h</compoundname>
+    <includes refid="record_8h" local="yes">logging/record.h</includes>
+    <includedby refid="console__appender_8h" local="yes">include/logging/appenders/console_appender.h</includedby>
+    <includedby refid="debug__appender_8h" local="yes">include/logging/appenders/debug_appender.h</includedby>
+    <includedby refid="error__appender_8h" local="yes">include/logging/appenders/error_appender.h</includedby>
+    <includedby refid="file__appender_8h" local="yes">include/logging/appenders/file_appender.h</includedby>
+    <includedby refid="memory__appender_8h" local="yes">include/logging/appenders/memory_appender.h</includedby>
+    <includedby refid="null__appender_8h" local="yes">include/logging/appenders/null_appender.h</includedby>
+    <includedby refid="ostream__appender_8h" local="yes">include/logging/appenders/ostream_appender.h</includedby>
+    <includedby refid="rolling__file__appender_8h" local="yes">include/logging/appenders/rolling_file_appender.h</includedby>
+    <includedby refid="syslog__appender_8h" local="yes">include/logging/appenders/syslog_appender.h</includedby>
+    <incdepgraph>
+      <node id="35">
+        <label>time/timestamp.h</label>
+      </node>
+      <node id="30">
+        <label>logging/level.h</label>
+        <link refid="level_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>cstdint</label>
+      </node>
+      <node id="36">
+        <label>string</label>
+      </node>
+      <node id="39">
+        <label>record.inl</label>
+      </node>
+      <node id="33">
+        <label>string/format.h</label>
+      </node>
+      <node id="29">
+        <label>logging/record.h</label>
+        <link refid="record_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>include/logging/appender.h</label>
+        <link refid="appender_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>vector</label>
+      </node>
+      <node id="38">
+        <label>utility</label>
+      </node>
+      <node id="34">
+        <label>threads/thread.h</label>
+      </node>
+      <node id="32">
+        <label>memory/memory.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="53">
+        <label>include/logging/appenders/memory_appender.h</label>
+        <link refid="memory__appender_8h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>include/logging/appenders/null_appender.h</label>
+        <link refid="null__appender_8h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>include/logging/config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="44">
+        <label>include/logging/processors/async_processor.h</label>
+        <link refid="async__processor_8h"/>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>include/logging/logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>include/logging/processors.h</label>
+        <link refid="processors_8h"/>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>include/logging/appender.h</label>
+        <link refid="appender_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>include/logging/appenders/console_appender.h</label>
+        <link refid="console__appender_8h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>include/logging/appenders/error_appender.h</label>
+        <link refid="error__appender_8h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>include/logging/appenders/rolling_file_appender.h</label>
+        <link refid="rolling__file__appender_8h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>include/logging/appenders/file_appender.h</label>
+        <link refid="file__appender_8h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>include/logging/processor.h</label>
+        <link refid="processor_8h"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>include/logging/processors/sync_processor.h</label>
+        <link refid="sync__processor_8h"/>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>include/logging/appenders.h</label>
+        <link refid="appenders_8h"/>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>include/logging/processors/buffered_processor.h</label>
+        <link refid="buffered__processor_8h"/>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>include/logging/appenders/debug_appender.h</label>
+        <link refid="debug__appender_8h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>include/logging/appenders/ostream_appender.h</label>
+        <link refid="ostream__appender_8h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>include/logging/appenders/syslog_appender.h</label>
+        <link refid="syslog__appender_8h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classCppLogging_1_1Appender" prot="public">CppLogging::Appender</innerclass>
+    <innernamespace refid="namespaceCppLogging">CppLogging</innernamespace>
+    <briefdescription>
+<para>Logging appender interface definition. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Ivan Shynkarenka </para>
+</simplesect>
+<simplesect kind="date"><para>26.07.2016 </para>
+</simplesect>
+<simplesect kind="copyright"><para>MIT License </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="include/logging/appender.h"/>
+  </compounddef>
+</doxygen>

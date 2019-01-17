@@ -1,0 +1,47 @@
+.TH "git-io" 3 "Thu Jan 17 2019" "CppLogging" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+git-io \- Git io 
+Guide how to git\&.
+.PP
+git流程：
+.PP
+.PP
+.nf
+git pull
+git add --all
+git commit -m "menu"
+git remote add origin https://github\&.com/firebirdtools/firebirdtools\&.github\&.io\&.git
+git push -u origin master
+.fi
+.PP
+.PP
+实例：
+.PP
+.PP
+.nf
+firebird@tools:~/gitcode/firebirdtools\&.github\&.io$ git pull
+已经是最新的。
+firebird@tools:~/gitcode/firebirdtools\&.github\&.io$ git add --all
+firebird@tools:~/gitcode/firebirdtools\&.github\&.io$ git commit -m "menu git-help"
+[master 3027b6e] menu git-help
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+firebird@tools:~/gitcode/firebirdtools\&.github\&.io$ git remote add origin https://github\&.com/firebirdtools/firebirdtools\&.github\&.io\&.git
+fatal: 远程 origin 已经存在。
+firebird@tools:~/gitcode/firebirdtools\&.github\&.io$ git push -u origin master
+Username for 'https://github\&.com': firebirdtools
+Password for 'https://firebirdtools@github\&.com': 
+对象计数中: 3, 完成\&.
+Delta compression using up to 4 threads\&.
+压缩对象中: 100% (3/3), 完成\&.
+写入对象中: 100% (3/3), 450 bytes | 450\&.00 KiB/s, 完成\&.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects\&.
+To https://github\&.com/firebirdtools/firebirdtools\&.github\&.io
+   19e4888\&.\&.3027b6e  master -> master
+分支 'master' 设置为跟踪来自 'origin' 的远程分支 'master'。
+firebird@tools:~/gitcode/firebirdtools\&.github\&.io$ 
+.fi
+.PP
+ 

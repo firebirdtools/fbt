@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_96ae6203eca9794c5312c0d66d754977" kind="dir">
+    <compoundname>include/logging/appenders</compoundname>
+    <innerfile refid="console__appender_8h">console_appender.h</innerfile>
+    <innerfile refid="debug__appender_8h">debug_appender.h</innerfile>
+    <innerfile refid="error__appender_8h">error_appender.h</innerfile>
+    <innerfile refid="file__appender_8h">file_appender.h</innerfile>
+    <innerfile refid="memory__appender_8h">memory_appender.h</innerfile>
+    <innerfile refid="null__appender_8h">null_appender.h</innerfile>
+    <innerfile refid="ostream__appender_8h">ostream_appender.h</innerfile>
+    <innerfile refid="rolling__file__appender_8h">rolling_file_appender.h</innerfile>
+    <innerfile refid="syslog__appender_8h">syslog_appender.h</innerfile>
+    <briefdescription>
+<para>A directory. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/logging/appenders/"/>
+  </compounddef>
+</doxygen>

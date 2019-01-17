@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="markdown-doc" kind="page">
+    <compoundname>markdown-doc</compoundname>
+    <title>markdown doc</title>
+    <briefdescription>
+<para>Guide how to markdown. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Guide how to markdown.</para>
+<para><hruler/>
+</para>
+<para><heading level="2">区块引用</heading>
+</para>
+<para><programlisting><codeline><highlight class="normal">&gt;<sp/>This<sp/>is<sp/>a<sp/>blockquote<sp/>with<sp/>two<sp/>paragraphs.<sp/>Lorem<sp/>ipsum<sp/>dolor<sp/>sit<sp/>amet,</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>consectetuer<sp/>adipiscing<sp/>elit.<sp/>Aliquam<sp/>hendrerit<sp/>mi<sp/>posuere<sp/>lectus.</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>Vestibulum<sp/>enim<sp/>wisi,<sp/>viverra<sp/>nec,<sp/>fringilla<sp/>in,<sp/>laoreet<sp/>vitae,<sp/>risus.</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>Donec<sp/>sit<sp/>amet<sp/>nisl.<sp/>Aliquam<sp/>semper<sp/>ipsum<sp/>sit<sp/>amet<sp/>velit.<sp/>Suspendisse</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>id<sp/>sem<sp/>consectetuer<sp/>libero<sp/>luctus<sp/>adipiscing.</highlight></codeline>
+</programlisting></para>
+<para><blockquote><para>This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</para>
+<para>Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse id sem consectetuer libero luctus adipiscing. </para>
+</blockquote></para>
+<para><hruler/>
+</para>
+<para><heading level="2">区块引用嵌套</heading>
+</para>
+<para><programlisting><codeline><highlight class="normal">&gt;<sp/>##<sp/>这是一个标题。</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>1.<sp/><sp/><sp/>这是第一行列表项。</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>2.<sp/><sp/><sp/>这是第二行列表项。</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>给出一些例子代码：</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/><sp/><sp/><sp/><sp/>return<sp/>shell_exec(&quot;echo<sp/>$input<sp/>|<sp/>$markdown_script&quot;);</highlight></codeline>
+</programlisting></para>
+<para><blockquote><para><heading level="2">这是一个标题。</heading>
+</para>
+<para></para>
+<para><orderedlist>
+<listitem><para>这是第一行列表项。</para>
+</listitem><listitem><para>这是第二行列表项。</para>
+</listitem></orderedlist>
+</para>
+<para>给出一些例子代码： <verbatim>return shell_exec(&quot;echo $input | $markdown_script&quot;);
+</verbatim> </para>
+</blockquote></para>
+<para><hruler/>
+</para>
+<para><heading level="2">区块引用嵌套</heading>
+</para>
+<para><table rows="1" cols="1"><row>
+<entry thead="no"><para>这里的背景色是：OrangeRed， 十六进制颜色值：::FF4500， rgb(255, 69, 0)</para>
+</entry></row>
+</table>
+<table rows="1" cols="1"><row>
+<entry thead="no"><para>这里的背景色是：OrangeRed， 十六进制颜色值：::FF4500， rgb(255, 69, 0)</para>
+</entry></row>
+</table>
+</para>
+<para><preformatted>
+  @code{.cmake}
+    ##! M_LINKS_NAVBAR1     = \
+    ##!                       &quot;mcss-help add-menu-item&quot; \
+    ##!                       &quot;&lt;a href=\&quot;#"&gt;Another link getting-started&quot; \
+    ##!                       &quot;namespaces"
+    ##! M_LINKS_NAVBAR2     = \
+    ##!                       &quot;annotated&quot; \
+    ##!                       &quot;files&quot; 
+  @endcode
+</preformatted> </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,107 @@
+.TH "CppLogging::AsyncBuffer" 3 "Thu Jan 17 2019" "CppLogging" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CppLogging::AsyncBuffer \- Asynchronous logging buffer\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <async_buffer\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAsyncBuffer\fP (size_t \fBcapacity\fP)"
+.br
+.RI "Default class constructor\&. "
+.ti -1c
+.RI "\fBAsyncBuffer\fP (const \fBAsyncBuffer\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBAsyncBuffer\fP (\fBAsyncBuffer\fP &&)=default"
+.br
+.ti -1c
+.RI "\fBAsyncBuffer\fP & \fBoperator=\fP (const \fBAsyncBuffer\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBAsyncBuffer\fP & \fBoperator=\fP (\fBAsyncBuffer\fP &&)=default"
+.br
+.ti -1c
+.RI "size_t \fBcapacity\fP () const noexcept"
+.br
+.RI "Get ring buffer capacity\&. "
+.ti -1c
+.RI "size_t \fBsize\fP () const noexcept"
+.br
+.RI "Get ring buffer size\&. "
+.ti -1c
+.RI "bool \fBEnqueue\fP (\fBRecord\fP &record)"
+.br
+.RI "Enqueue and swap the logging record into the ring buffer (multiple producers threads method) "
+.ti -1c
+.RI "bool \fBDequeue\fP (\fBRecord\fP &record)"
+.br
+.RI "Dequeue and swap the logging record from the ring buffer (multiple consumers threads method) "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Asynchronous logging buffer\&. 
+
+Multiple producers / multiple consumers wait-free ring buffer use only atomic operations to provide thread-safe enqueue and dequeue operations\&. Ring buffer size is limited to the capacity provided in the constructor\&.
+.PP
+FIFO order is guaranteed!
+.PP
+C++ implementation of Dmitry Vyukov's non-intrusive lock free unbound MPSC queue http://www.1024cores.net/home/lock-free-algorithms/queues/non-intrusive-mpsc-node-based-queue 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CppLogging::AsyncBuffer::AsyncBuffer (size_t capacity)\fC [explicit]\fP"
+
+.PP
+Default class constructor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcapacity\fP - Ring buffer capacity (must be a power of two) 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool CppLogging::AsyncBuffer::Dequeue (\fBRecord\fP & record)"
+
+.PP
+Dequeue and swap the logging record from the ring buffer (multiple consumers threads method) 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrecord\fP - Logging record to dequeue and swap 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+'true' if the item was successfully dequeue, 'false' if the ring buffer is empty 
+.RE
+.PP
+
+.SS "bool CppLogging::AsyncBuffer::Enqueue (\fBRecord\fP & record)"
+
+.PP
+Enqueue and swap the logging record into the ring buffer (multiple producers threads method) 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrecord\fP - Logging record to enqueue and swap 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+'true' if the item was successfully enqueue, 'false' if the ring buffer is full 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CppLogging from the source code\&.

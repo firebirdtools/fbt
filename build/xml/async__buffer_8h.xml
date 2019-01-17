@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="async__buffer_8h" kind="file" language="C++">
+    <compoundname>async_buffer.h</compoundname>
+    <includes refid="record_8h" local="yes">logging/record.h</includes>
+    <includes local="no">atomic</includes>
+    <includes local="no">cassert</includes>
+    <includes local="no">cstdio</includes>
+    <includes local="no">cstring</includes>
+    <includes local="no">utility</includes>
+    <includes local="yes">async_buffer.inl</includes>
+    <includedby refid="async__processor_8h" local="yes">include/logging/processors/async_processor.h</includedby>
+    <incdepgraph>
+      <node id="762">
+        <label>atomic</label>
+      </node>
+      <node id="757">
+        <label>time/timestamp.h</label>
+      </node>
+      <node id="752">
+        <label>logging/level.h</label>
+        <link refid="level_8h"/>
+        <childnode refid="753" relation="include">
+        </childnode>
+      </node>
+      <node id="753">
+        <label>cstdint</label>
+      </node>
+      <node id="763">
+        <label>cassert</label>
+      </node>
+      <node id="758">
+        <label>string</label>
+      </node>
+      <node id="750">
+        <label>include/logging/processors/async_buffer.h</label>
+        <link refid="async__buffer_8h"/>
+        <childnode refid="751" relation="include">
+        </childnode>
+        <childnode refid="762" relation="include">
+        </childnode>
+        <childnode refid="763" relation="include">
+        </childnode>
+        <childnode refid="764" relation="include">
+        </childnode>
+        <childnode refid="765" relation="include">
+        </childnode>
+        <childnode refid="760" relation="include">
+        </childnode>
+        <childnode refid="766" relation="include">
+        </childnode>
+      </node>
+      <node id="761">
+        <label>record.inl</label>
+      </node>
+      <node id="755">
+        <label>string/format.h</label>
+      </node>
+      <node id="751">
+        <label>logging/record.h</label>
+        <link refid="record_8h"/>
+        <childnode refid="752" relation="include">
+        </childnode>
+        <childnode refid="754" relation="include">
+        </childnode>
+        <childnode refid="755" relation="include">
+        </childnode>
+        <childnode refid="756" relation="include">
+        </childnode>
+        <childnode refid="757" relation="include">
+        </childnode>
+        <childnode refid="758" relation="include">
+        </childnode>
+        <childnode refid="759" relation="include">
+        </childnode>
+        <childnode refid="760" relation="include">
+        </childnode>
+        <childnode refid="761" relation="include">
+        </childnode>
+      </node>
+      <node id="764">
+        <label>cstdio</label>
+      </node>
+      <node id="759">
+        <label>vector</label>
+      </node>
+      <node id="760">
+        <label>utility</label>
+      </node>
+      <node id="766">
+        <label>async_buffer.inl</label>
+      </node>
+      <node id="756">
+        <label>threads/thread.h</label>
+      </node>
+      <node id="754">
+        <label>memory/memory.h</label>
+      </node>
+      <node id="765">
+        <label>cstring</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="771">
+        <label>include/logging/config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="768">
+        <label>include/logging/processors/async_processor.h</label>
+        <link refid="async__processor_8h"/>
+        <childnode refid="769" relation="include">
+        </childnode>
+      </node>
+      <node id="767">
+        <label>include/logging/processors/async_buffer.h</label>
+        <link refid="async__buffer_8h"/>
+        <childnode refid="768" relation="include">
+        </childnode>
+      </node>
+      <node id="770">
+        <label>include/logging/logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="771" relation="include">
+        </childnode>
+      </node>
+      <node id="769">
+        <label>include/logging/processors.h</label>
+        <link refid="processors_8h"/>
+        <childnode refid="770" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classCppLogging_1_1AsyncBuffer" prot="public">CppLogging::AsyncBuffer</innerclass>
+    <innerclass refid="structCppLogging_1_1AsyncBuffer_1_1Node" prot="private">CppLogging::AsyncBuffer::Node</innerclass>
+    <innernamespace refid="namespaceCppLogging">CppLogging</innernamespace>
+    <briefdescription>
+<para>Asynchronous logging buffer definition. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Ivan Shynkarenka </para>
+</simplesect>
+<simplesect kind="date"><para>04.08.2016 </para>
+</simplesect>
+<simplesect kind="copyright"><para>MIT License </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="include/logging/processors/async_buffer.h"/>
+  </compounddef>
+</doxygen>

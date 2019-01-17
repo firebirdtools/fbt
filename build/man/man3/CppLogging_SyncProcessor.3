@@ -1,0 +1,89 @@
+.TH "CppLogging::SyncProcessor" 3 "Thu Jan 17 2019" "CppLogging" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CppLogging::SyncProcessor \- Synchronous logging processor\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <sync_processor\&.h>\fP
+.PP
+Inherits \fBCppLogging::Processor\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSyncProcessor\fP (const \fBSyncProcessor\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBSyncProcessor\fP (\fBSyncProcessor\fP &&) noexcept=default"
+.br
+.ti -1c
+.RI "\fBSyncProcessor\fP & \fBoperator=\fP (const \fBSyncProcessor\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBSyncProcessor\fP & \fBoperator=\fP (\fBSyncProcessor\fP &&) noexcept=default"
+.br
+.ti -1c
+.RI "bool \fBProcessRecord\fP (\fBRecord\fP &record) override"
+.br
+.RI "Process the given logging record through all child filters, layouts and appenders\&. "
+.ti -1c
+.RI "void \fBFlush\fP () override"
+.br
+.RI "Flush the current logging processor\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Synchronous logging processor\&. 
+
+Synchronous logging processor process the given logging record under the critical section to avoid races in not thread-safe layouts, filters and appenders\&.
+.PP
+Thread-safe\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void CppLogging::SyncProcessor::Flush ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Flush the current logging processor\&. Default behavior of the method will flush in the following sequence:
+.IP "\(bu" 2
+all appenders (if any present)
+.IP "\(bu" 2
+all sub processors (if any present) 
+.PP
+
+.PP
+Reimplemented from \fBCppLogging::Processor\fP\&.
+.SS "bool CppLogging::SyncProcessor::ProcessRecord (\fBRecord\fP & record)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Process the given logging record through all child filters, layouts and appenders\&. Default behavior of the method will take the given logging record and process it in the following sequence:
+.IP "\(bu" 2
+all filters (if any present)
+.IP "\(bu" 2
+all layouts (if any present)
+.IP "\(bu" 2
+all appenders (if any present)
+.IP "\(bu" 2
+all sub processors (if any present)
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrecord\fP - Logging record 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+'true' if the logging record was successfully processed, 'false' if the logging record was filtered out 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBCppLogging::Processor\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CppLogging from the source code\&.

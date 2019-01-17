@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classCppLogging_1_1Layout" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>CppLogging::Layout</compoundname>
+    <derivedcompoundref refid="classCppLogging_1_1BinaryLayout" prot="public" virt="non-virtual">CppLogging::BinaryLayout</derivedcompoundref>
+    <derivedcompoundref refid="classCppLogging_1_1TextLayout" prot="public" virt="non-virtual">CppLogging::TextLayout</derivedcompoundref>
+    <includes refid="layout_8h" local="no">layout.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCppLogging_1_1Layout_1a2afe7ead82e265c5a83777911d3c9a49" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void CppLogging::Layout::LayoutRecord</definition>
+        <argsstring>(Record &amp;record)=0</argsstring>
+        <name>LayoutRecord</name>
+        <reimplementedby refid="classCppLogging_1_1BinaryLayout_1a1ab08fc44268c0e285d7e614fd77dd7c">LayoutRecord</reimplementedby>
+        <reimplementedby refid="classCppLogging_1_1TextLayout_1a9d655aa4844d48fe4170fa21d5dcfd23">LayoutRecord</reimplementedby>
+        <param>
+          <type><ref refid="classCppLogging_1_1Record" kindref="compound">Record</ref> &amp;</type>
+          <declname>record</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classCppLogging_1_1Layout" kindref="compound">Layout</ref> the given logging record into a raw buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method will update the raw filed of the given logging record.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>record</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Logging record </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/layout.h" line="33" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Logging layout interface. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Logging layout takes an instance of a single logging record and convert it into a raw buffer (raw filed will be updated).</para>
+<para><simplesect kind="see"><para><ref refid="classCppLogging_1_1BinaryLayout" kindref="compound">BinaryLayout</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classCppLogging_1_1TextLayout" kindref="compound">TextLayout</ref> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="50">
+        <label>CppLogging::BinaryLayout</label>
+        <link refid="classCppLogging_1_1BinaryLayout"/>
+        <childnode refid="49" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>CppLogging::Layout</label>
+        <link refid="classCppLogging_1_1Layout"/>
+      </node>
+      <node id="51">
+        <label>CppLogging::TextLayout</label>
+        <link refid="classCppLogging_1_1TextLayout"/>
+        <childnode refid="49" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="include/logging/layout.h" line="25" column="1" bodyfile="include/logging/layout.h" bodystart="24" bodyend="34"/>
+    <listofallmembers>
+      <member refid="classCppLogging_1_1Layout_1a2afe7ead82e265c5a83777911d3c9a49" prot="public" virt="pure-virtual"><scope>CppLogging::Layout</scope><name>LayoutRecord</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

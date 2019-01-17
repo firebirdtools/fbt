@@ -1,0 +1,187 @@
+.TH "CppLogging::RollingFileAppender" 3 "Thu Jan 17 2019" "CppLogging" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CppLogging::RollingFileAppender \- Rolling file appender\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <rolling_file_appender\&.h>\fP
+.PP
+Inherits \fBCppLogging::Appender\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRollingFileAppender\fP (const CppCommon::Path &path, \fBTimeRollingPolicy\fP policy=\fBTimeRollingPolicy::DAY\fP, const std::string &pattern='{UtcDateTime}\&.log', bool archive=false, bool truncate=false, bool auto_flush=false)"
+.br
+.RI "Initialize the rolling file appender with a time-based policy\&. "
+.ti -1c
+.RI "\fBRollingFileAppender\fP (const CppCommon::Path &path, const std::string &filename, const std::string &extension, size_t size=104857600, size_t backups=10, bool archive=false, bool truncate=false, bool auto_flush=false)"
+.br
+.RI "Initialize the rolling file appender with a size-based policy\&. "
+.ti -1c
+.RI "\fBRollingFileAppender\fP (const \fBRollingFileAppender\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBRollingFileAppender\fP (\fBRollingFileAppender\fP &&appender) noexcept"
+.br
+.ti -1c
+.RI "\fBRollingFileAppender\fP & \fBoperator=\fP (const \fBRollingFileAppender\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBRollingFileAppender\fP & \fBoperator=\fP (\fBRollingFileAppender\fP &&appender) noexcept"
+.br
+.ti -1c
+.RI "void \fBAppendRecord\fP (\fBRecord\fP &record) override"
+.br
+.RI "Append the given logging record\&. "
+.ti -1c
+.RI "void \fBFlush\fP () override"
+.br
+.RI "Flush the logging appender\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBonArchiveThreadInitialize\fP ()"
+.br
+.RI "Initialize archivation thread handler\&. "
+.ti -1c
+.RI "virtual void \fBonArchiveThreadCleanup\fP ()"
+.br
+.RI "Cleanup archivation thread handler\&. "
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBSizePolicyImpl\fP"
+.br
+.ti -1c
+.RI "class \fBTimePolicyImpl\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Rolling file appender\&. 
+
+Rolling file appender writes the given logging record into the file and performs file rolling operation depends on the given policy\&. In case of any IO error this appender will lost the logging record, but try to recover from fail in a short interval of 100ms\&.
+.PP
+Time-based rolling policy will create a new logging file to write into using a special pattern (contains date & time placeholders)\&.
+.PP
+Size-based rolling policy will create a new logging file to write when the current file size exceeded size limit\&. Logging backups are indexed and its count could be limited as well\&.
+.PP
+It is possible to enable archivation of the logging backups in a background thread\&.
+.PP
+Not thread-safe\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CppLogging::RollingFileAppender::RollingFileAppender (const CppCommon::Path & path, \fBTimeRollingPolicy\fP policy = \fC\fBTimeRollingPolicy::DAY\fP\fP, const std::string & pattern = \fC'{UtcDateTime}\&.log'\fP, bool archive = \fCfalse\fP, bool truncate = \fCfalse\fP, bool auto_flush = \fCfalse\fP)\fC [explicit]\fP"
+
+.PP
+Initialize the rolling file appender with a time-based policy\&. Time-based policy composes logging filename from the given pattern using the following placeholders:
+.IP "\(bu" 2
+{UtcDateTime} / {LocalDateTime} - converted to the UTC/local date & time (e\&.g\&. '1997-07-16T192030Z' / '1997-07-16T192030+0100')
+.IP "\(bu" 2
+{UtcDate} / {LocalDate} - converted to the UTC/local date (e\&.g\&. '1997-07-16')
+.IP "\(bu" 2
+{Time} / {LocalTime} - converted to the UTC/local time (e\&.g\&. '192030Z' / '192030+0100')
+.IP "\(bu" 2
+{UtcYear} / {LocalYear} - converted to the UTC/local four-digits year (e\&.g\&. '1997')
+.IP "\(bu" 2
+{UtcMonth} / {LocalMonth} - converted to the UTC/local two-digits month (e\&.g\&. '07')
+.IP "\(bu" 2
+{UtcDay} / {LocalDay} - converted to the UTC/local two-digits day (e\&.g\&. '16')
+.IP "\(bu" 2
+{UtcHour} / {LocalHour} - converted to the UTC/local two-digits hour (e\&.g\&. '19')
+.IP "\(bu" 2
+{UtcMinute} / {LocalMinute} - converted to the UTC/local two-digits minute (e\&.g\&. '20')
+.IP "\(bu" 2
+{UtcSecond} / {LocalSecond} - converted to the UTC/local two-digits second (e\&.g\&. '30')
+.IP "\(bu" 2
+{UtcTimezone} / {LocalTimezone} - converted to the UTC/local timezone suffix (e\&.g\&. 'Z' / '+0100')
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpath\fP - Logging path 
+.br
+\fIpolicy\fP - Time-based rolling policy (default is \fBTimeRollingPolicy::DAY\fP) 
+.br
+\fIpattern\fP - Logging pattern (default is '{UtcDateTime}\&.log') 
+.br
+\fIarchive\fP - Archivation flag (default is false) 
+.br
+\fItruncate\fP - Truncate flag (default is false) 
+.br
+\fIauto_flush\fP - Auto-flush flag (default is false) 
+.RE
+.PP
+
+.SS "CppLogging::RollingFileAppender::RollingFileAppender (const CppCommon::Path & path, const std::string & filename, const std::string & extension, size_t size = \fC104857600\fP, size_t backups = \fC10\fP, bool archive = \fCfalse\fP, bool truncate = \fCfalse\fP, bool auto_flush = \fCfalse\fP)\fC [explicit]\fP"
+
+.PP
+Initialize the rolling file appender with a size-based policy\&. Size-based policy for 5 backups works in a following way:
+.PP
+example\&.log -> example\&.1\&.log example\&.1\&.log -> example\&.2\&.log example\&.2\&.log -> example\&.3\&.log example\&.3\&.log -> example\&.4\&.log example\&.4\&.log -> example\&.5\&.log example\&.5\&.log -> remove
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpath\fP - Logging path 
+.br
+\fIfilename\fP - Logging filename 
+.br
+\fIextension\fP - Logging extension 
+.br
+\fIsize\fP - Rolling size limit in bytes (default is 100 megabytes) 
+.br
+\fIbackups\fP - Rolling backups count (default is 10) 
+.br
+\fIarchive\fP - Archivation flag (default is false) 
+.br
+\fItruncate\fP - Truncate flag (default is false) 
+.br
+\fIauto_flush\fP - Auto-flush flag (default is false) 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void CppLogging::RollingFileAppender::AppendRecord (\fBRecord\fP & record)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Append the given logging record\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrecord\fP - Logging record 
+.RE
+.PP
+
+.PP
+Implements \fBCppLogging::Appender\fP\&.
+.SS "virtual void CppLogging::RollingFileAppender::onArchiveThreadCleanup ()\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Cleanup archivation thread handler\&. This handler can be used to cleanup priority or affinity of the archivation thread\&. 
+.PP
+.nf
+121 {}
+.fi
+.SS "virtual void CppLogging::RollingFileAppender::onArchiveThreadInitialize ()\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Initialize archivation thread handler\&. This handler can be used to initialize priority or affinity of the archivation thread\&. 
+.PP
+.nf
+116 {}
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CppLogging from the source code\&.

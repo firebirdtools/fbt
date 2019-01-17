@@ -1,0 +1,59 @@
+.TH "CppLogging::SyslogAppender" 3 "Thu Jan 17 2019" "CppLogging" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CppLogging::SyslogAppender \- Syslog appender\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <syslog_appender\&.h>\fP
+.PP
+Inherits \fBCppLogging::Appender\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSyslogAppender\fP (const \fBSyslogAppender\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBSyslogAppender\fP (\fBSyslogAppender\fP &&) noexcept=default"
+.br
+.ti -1c
+.RI "\fBSyslogAppender\fP & \fBoperator=\fP (const \fBSyslogAppender\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBSyslogAppender\fP & \fBoperator=\fP (\fBSyslogAppender\fP &&) noexcept=default"
+.br
+.ti -1c
+.RI "void \fBAppendRecord\fP (\fBRecord\fP &record) override"
+.br
+.RI "Append the given logging record\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Syslog appender\&. 
+
+Syslog appender forward logging record to the syslog() system call for Unix systems\&. Under Windows systems this appender does nothing!
+.PP
+Thread-safe\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void CppLogging::SyslogAppender::AppendRecord (\fBRecord\fP & record)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Append the given logging record\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrecord\fP - Logging record 
+.RE
+.PP
+
+.PP
+Implements \fBCppLogging::Appender\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CppLogging from the source code\&.

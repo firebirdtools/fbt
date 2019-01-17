@@ -1,0 +1,258 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classCppLogging_1_1LevelFilter" kind="class" language="C++" prot="public">
+    <compoundname>CppLogging::LevelFilter</compoundname>
+    <basecompoundref refid="classCppLogging_1_1Filter" prot="public" virt="non-virtual">CppLogging::Filter</basecompoundref>
+    <includes refid="level__filter_8h" local="no">level_filter.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classCppLogging_1_1LevelFilter_1aa9ec71e2103563369b04365526402721" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceCppLogging_1ac4e889a814b82af010ef93be2e618f3b" kindref="member">Level</ref></type>
+        <definition>Level CppLogging::LevelFilter::_from</definition>
+        <argsstring></argsstring>
+        <name>_from</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/filters/level_filter.h" line="48" column="1" bodyfile="include/logging/filters/level_filter.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCppLogging_1_1LevelFilter_1a45f6cd7c90d1761c08350318a2f25b41" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceCppLogging_1ac4e889a814b82af010ef93be2e618f3b" kindref="member">Level</ref></type>
+        <definition>Level CppLogging::LevelFilter::_to</definition>
+        <argsstring></argsstring>
+        <name>_to</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/filters/level_filter.h" line="49" column="1" bodyfile="include/logging/filters/level_filter.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCppLogging_1_1LevelFilter_1a6f4c792cb1fdc281e9e2545c2d303bc3" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CppLogging::LevelFilter::LevelFilter</definition>
+        <argsstring>(Level level)</argsstring>
+        <name>LevelFilter</name>
+        <param>
+          <type><ref refid="namespaceCppLogging_1ac4e889a814b82af010ef93be2e618f3b" kindref="member">Level</ref></type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+<para>Initialize level filter with a given level value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>level</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Level value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/filters/level_filter.h" line="30" column="1" bodyfile="include/logging/filters/level_filter.h" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1LevelFilter_1acd95eee3a15cd6897d3a525d77520600" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CppLogging::LevelFilter::LevelFilter</definition>
+        <argsstring>(Level from, Level to)</argsstring>
+        <name>LevelFilter</name>
+        <param>
+          <type><ref refid="namespaceCppLogging_1ac4e889a814b82af010ef93be2e618f3b" kindref="member">Level</ref></type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceCppLogging_1ac4e889a814b82af010ef93be2e618f3b" kindref="member">Level</ref></type>
+          <declname>to</declname>
+        </param>
+        <briefdescription>
+<para>Initialize level filter with a given level range. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Level from value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>to</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Level to value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/filters/level_filter.h" line="36" column="1" bodyfile="include/logging/filters/level_filter.h" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1LevelFilter_1a6667b0650d2b7e5fa5400b50914c9074" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CppLogging::LevelFilter::LevelFilter</definition>
+        <argsstring>(const LevelFilter &amp;)=delete</argsstring>
+        <name>LevelFilter</name>
+        <param>
+          <type>const <ref refid="classCppLogging_1_1LevelFilter" kindref="compound">LevelFilter</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/filters/level_filter.h" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1LevelFilter_1ad80198530e0bb7c2ccdc08f90f79c905" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CppLogging::LevelFilter::LevelFilter</definition>
+        <argsstring>(LevelFilter &amp;&amp;) noexcept=default</argsstring>
+        <name>LevelFilter</name>
+        <param>
+          <type><ref refid="classCppLogging_1_1LevelFilter" kindref="compound">LevelFilter</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/filters/level_filter.h" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1LevelFilter_1a773c68b5c3b38e553d4b04915e3db564" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual CppLogging::LevelFilter::~LevelFilter</definition>
+        <argsstring>()=default</argsstring>
+        <name>~LevelFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/filters/level_filter.h" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1LevelFilter_1a0e676427c05d7d4771690ccdd1143321" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classCppLogging_1_1LevelFilter" kindref="compound">LevelFilter</ref> &amp;</type>
+        <definition>LevelFilter&amp; CppLogging::LevelFilter::operator=</definition>
+        <argsstring>(const LevelFilter &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classCppLogging_1_1LevelFilter" kindref="compound">LevelFilter</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/filters/level_filter.h" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1LevelFilter_1a0676e8719c1dcbb75971e462227cc616" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classCppLogging_1_1LevelFilter" kindref="compound">LevelFilter</ref> &amp;</type>
+        <definition>LevelFilter&amp; CppLogging::LevelFilter::operator=</definition>
+        <argsstring>(LevelFilter &amp;&amp;) noexcept=default</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classCppLogging_1_1LevelFilter" kindref="compound">LevelFilter</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/filters/level_filter.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1LevelFilter_1accab31d29bc8d4eb53e9764b673764bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool CppLogging::LevelFilter::FilterRecord</definition>
+        <argsstring>(Record &amp;record) override</argsstring>
+        <name>FilterRecord</name>
+        <reimplements refid="classCppLogging_1_1Filter_1af8e8cba41c936d1d3c10476091bd44b2">FilterRecord</reimplements>
+        <param>
+          <type><ref refid="classCppLogging_1_1Record" kindref="compound">Record</ref> &amp;</type>
+          <declname>record</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classCppLogging_1_1Filter" kindref="compound">Filter</ref> the given logging record. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>record</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Logging record </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&apos;true&apos; if the logging record should be processed, &apos;false&apos; if the logging record was filtered out </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/filters/level_filter.h" line="45" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Level filter. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Level filters out logging records which level filed is not matched to the given level value or range.</para>
+<para>Thread-safe. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="54">
+        <label>CppLogging::Filter</label>
+        <link refid="classCppLogging_1_1Filter"/>
+      </node>
+      <node id="53">
+        <label>CppLogging::LevelFilter</label>
+        <link refid="classCppLogging_1_1LevelFilter"/>
+        <childnode refid="54" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="56">
+        <label>CppLogging::Filter</label>
+        <link refid="classCppLogging_1_1Filter"/>
+      </node>
+      <node id="55">
+        <label>CppLogging::LevelFilter</label>
+        <link refid="classCppLogging_1_1LevelFilter"/>
+        <childnode refid="56" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/logging/filters/level_filter.h" line="24" column="1" bodyfile="include/logging/filters/level_filter.h" bodystart="23" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classCppLogging_1_1LevelFilter_1aa9ec71e2103563369b04365526402721" prot="private" virt="non-virtual"><scope>CppLogging::LevelFilter</scope><name>_from</name></member>
+      <member refid="classCppLogging_1_1LevelFilter_1a45f6cd7c90d1761c08350318a2f25b41" prot="private" virt="non-virtual"><scope>CppLogging::LevelFilter</scope><name>_to</name></member>
+      <member refid="classCppLogging_1_1LevelFilter_1accab31d29bc8d4eb53e9764b673764bd" prot="public" virt="virtual"><scope>CppLogging::LevelFilter</scope><name>FilterRecord</name></member>
+      <member refid="classCppLogging_1_1LevelFilter_1a6f4c792cb1fdc281e9e2545c2d303bc3" prot="public" virt="non-virtual"><scope>CppLogging::LevelFilter</scope><name>LevelFilter</name></member>
+      <member refid="classCppLogging_1_1LevelFilter_1acd95eee3a15cd6897d3a525d77520600" prot="public" virt="non-virtual"><scope>CppLogging::LevelFilter</scope><name>LevelFilter</name></member>
+      <member refid="classCppLogging_1_1LevelFilter_1a6667b0650d2b7e5fa5400b50914c9074" prot="public" virt="non-virtual"><scope>CppLogging::LevelFilter</scope><name>LevelFilter</name></member>
+      <member refid="classCppLogging_1_1LevelFilter_1ad80198530e0bb7c2ccdc08f90f79c905" prot="public" virt="non-virtual"><scope>CppLogging::LevelFilter</scope><name>LevelFilter</name></member>
+      <member refid="classCppLogging_1_1LevelFilter_1a0e676427c05d7d4771690ccdd1143321" prot="public" virt="non-virtual"><scope>CppLogging::LevelFilter</scope><name>operator=</name></member>
+      <member refid="classCppLogging_1_1LevelFilter_1a0676e8719c1dcbb75971e462227cc616" prot="public" virt="non-virtual"><scope>CppLogging::LevelFilter</scope><name>operator=</name></member>
+      <member refid="classCppLogging_1_1LevelFilter_1a773c68b5c3b38e553d4b04915e3db564" prot="public" virt="virtual"><scope>CppLogging::LevelFilter</scope><name>~LevelFilter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

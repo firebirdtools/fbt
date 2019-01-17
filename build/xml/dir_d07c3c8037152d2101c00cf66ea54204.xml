@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_d07c3c8037152d2101c00cf66ea54204" kind="dir">
+    <compoundname>include/logging/processors</compoundname>
+    <innerfile refid="async__buffer_8h">async_buffer.h</innerfile>
+    <innerfile refid="async__processor_8h">async_processor.h</innerfile>
+    <innerfile refid="buffered__processor_8h">buffered_processor.h</innerfile>
+    <innerfile refid="sync__processor_8h">sync_processor.h</innerfile>
+    <briefdescription>
+<para>A directory. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/logging/processors/"/>
+  </compounddef>
+</doxygen>

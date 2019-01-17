@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="trigger_8h" kind="file" language="C++">
+    <compoundname>trigger.h</compoundname>
+    <includes refid="filter_8h" local="yes">logging/filter.h</includes>
+    <includes local="no">atomic</includes>
+    <includedby refid="filters_8h" local="yes">include/logging/filters.h</includedby>
+    <incdepgraph>
+      <node id="964">
+        <label>atomic</label>
+      </node>
+      <node id="952">
+        <label>logging/filter.h</label>
+        <link refid="filter_8h"/>
+        <childnode refid="953" relation="include">
+        </childnode>
+      </node>
+      <node id="959">
+        <label>time/timestamp.h</label>
+      </node>
+      <node id="954">
+        <label>logging/level.h</label>
+        <link refid="level_8h"/>
+        <childnode refid="955" relation="include">
+        </childnode>
+      </node>
+      <node id="955">
+        <label>cstdint</label>
+      </node>
+      <node id="960">
+        <label>string</label>
+      </node>
+      <node id="963">
+        <label>record.inl</label>
+      </node>
+      <node id="957">
+        <label>string/format.h</label>
+      </node>
+      <node id="953">
+        <label>logging/record.h</label>
+        <link refid="record_8h"/>
+        <childnode refid="954" relation="include">
+        </childnode>
+        <childnode refid="956" relation="include">
+        </childnode>
+        <childnode refid="957" relation="include">
+        </childnode>
+        <childnode refid="958" relation="include">
+        </childnode>
+        <childnode refid="959" relation="include">
+        </childnode>
+        <childnode refid="960" relation="include">
+        </childnode>
+        <childnode refid="961" relation="include">
+        </childnode>
+        <childnode refid="962" relation="include">
+        </childnode>
+        <childnode refid="963" relation="include">
+        </childnode>
+      </node>
+      <node id="951">
+        <label>include/logging/trigger.h</label>
+        <link refid="trigger_8h"/>
+        <childnode refid="952" relation="include">
+        </childnode>
+        <childnode refid="964" relation="include">
+        </childnode>
+      </node>
+      <node id="961">
+        <label>vector</label>
+      </node>
+      <node id="962">
+        <label>utility</label>
+      </node>
+      <node id="958">
+        <label>threads/thread.h</label>
+      </node>
+      <node id="956">
+        <label>memory/memory.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="971">
+        <label>include/logging/config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="968">
+        <label>include/logging/processors/async_processor.h</label>
+        <link refid="async__processor_8h"/>
+        <childnode refid="969" relation="include">
+        </childnode>
+      </node>
+      <node id="970">
+        <label>include/logging/logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="971" relation="include">
+        </childnode>
+      </node>
+      <node id="969">
+        <label>include/logging/processors.h</label>
+        <link refid="processors_8h"/>
+        <childnode refid="970" relation="include">
+        </childnode>
+      </node>
+      <node id="966">
+        <label>include/logging/filters.h</label>
+        <link refid="filters_8h"/>
+        <childnode refid="967" relation="include">
+        </childnode>
+      </node>
+      <node id="967">
+        <label>include/logging/processor.h</label>
+        <link refid="processor_8h"/>
+        <childnode refid="968" relation="include">
+        </childnode>
+        <childnode refid="972" relation="include">
+        </childnode>
+        <childnode refid="973" relation="include">
+        </childnode>
+      </node>
+      <node id="965">
+        <label>include/logging/trigger.h</label>
+        <link refid="trigger_8h"/>
+        <childnode refid="966" relation="include">
+        </childnode>
+      </node>
+      <node id="973">
+        <label>include/logging/processors/sync_processor.h</label>
+        <link refid="sync__processor_8h"/>
+        <childnode refid="969" relation="include">
+        </childnode>
+      </node>
+      <node id="972">
+        <label>include/logging/processors/buffered_processor.h</label>
+        <link refid="buffered__processor_8h"/>
+        <childnode refid="969" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classCppLogging_1_1Trigger" prot="public">CppLogging::Trigger</innerclass>
+    <innernamespace refid="namespaceCppLogging">CppLogging</innernamespace>
+    <briefdescription>
+<para>Logging trigger definition. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Ivan Shynkarenka </para>
+</simplesect>
+<simplesect kind="date"><para>27.07.2016 </para>
+</simplesect>
+<simplesect kind="copyright"><para>MIT License </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="include/logging/trigger.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,331 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classCppLogging_1_1Processor" kind="class" language="C++" prot="public">
+    <compoundname>CppLogging::Processor</compoundname>
+    <derivedcompoundref refid="classCppLogging_1_1AsyncProcessor" prot="public" virt="non-virtual">CppLogging::AsyncProcessor</derivedcompoundref>
+    <derivedcompoundref refid="classCppLogging_1_1BufferedProcessor" prot="public" virt="non-virtual">CppLogging::BufferedProcessor</derivedcompoundref>
+    <derivedcompoundref refid="classCppLogging_1_1SyncProcessor" prot="public" virt="non-virtual">CppLogging::SyncProcessor</derivedcompoundref>
+    <includes refid="processor_8h" local="no">processor.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classCppLogging_1_1Processor_1aaef53974adcf8fdc7934d4b739082185" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="classCppLogging_1_1Filter" kindref="compound">Filter</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::shared_ptr&lt;Filter&gt; &gt; CppLogging::Processor::_filters</definition>
+        <argsstring></argsstring>
+        <name>_filters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processor.h" line="72" column="1" bodyfile="include/logging/processor.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCppLogging_1_1Processor_1a9b4e1623afdab4ae7f95806a4b987064" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="classCppLogging_1_1Layout" kindref="compound">Layout</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::shared_ptr&lt;Layout&gt; &gt; CppLogging::Processor::_layouts</definition>
+        <argsstring></argsstring>
+        <name>_layouts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processor.h" line="73" column="1" bodyfile="include/logging/processor.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCppLogging_1_1Processor_1a1be332fe9c9fc637970fd533f2280a89" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="classCppLogging_1_1Appender" kindref="compound">Appender</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::shared_ptr&lt;Appender&gt; &gt; CppLogging::Processor::_appenders</definition>
+        <argsstring></argsstring>
+        <name>_appenders</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processor.h" line="74" column="1" bodyfile="include/logging/processor.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCppLogging_1_1Processor_1ab52ee1a818777d9d9d725c74280f102f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="classCppLogging_1_1Processor" kindref="compound">Processor</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::shared_ptr&lt;Processor&gt; &gt; CppLogging::Processor::_processors</definition>
+        <argsstring></argsstring>
+        <name>_processors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processor.h" line="75" column="1" bodyfile="include/logging/processor.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCppLogging_1_1Processor_1ab9e8bf067a254854f6f5bb8a108c1105" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CppLogging::Processor::Processor</definition>
+        <argsstring>()=default</argsstring>
+        <name>Processor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processor.h" line="32" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1Processor_1a18d2e051692b2ef3096ae5cca6a3ee58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CppLogging::Processor::Processor</definition>
+        <argsstring>(const Processor &amp;)=default</argsstring>
+        <name>Processor</name>
+        <param>
+          <type>const <ref refid="classCppLogging_1_1Processor" kindref="compound">Processor</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processor.h" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1Processor_1af909c31ebb473cad9623ca3b84f8cc91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CppLogging::Processor::Processor</definition>
+        <argsstring>(Processor &amp;&amp;) noexcept=default</argsstring>
+        <name>Processor</name>
+        <param>
+          <type><ref refid="classCppLogging_1_1Processor" kindref="compound">Processor</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processor.h" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1Processor_1aa232011a6bc4ba37d8acc56158ea43a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual CppLogging::Processor::~Processor</definition>
+        <argsstring>()</argsstring>
+        <name>~Processor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processor.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1Processor_1af0fb712251609787a41aecb4717d64a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classCppLogging_1_1Processor" kindref="compound">Processor</ref> &amp;</type>
+        <definition>Processor&amp; CppLogging::Processor::operator=</definition>
+        <argsstring>(const Processor &amp;)=default</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classCppLogging_1_1Processor" kindref="compound">Processor</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processor.h" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1Processor_1a91a5f1520149d34a37bfc91de66830f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classCppLogging_1_1Processor" kindref="compound">Processor</ref> &amp;</type>
+        <definition>Processor&amp; CppLogging::Processor::operator=</definition>
+        <argsstring>(Processor &amp;&amp;) noexcept=default</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classCppLogging_1_1Processor" kindref="compound">Processor</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processor.h" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1Processor_1ae7f724429d96b5a76d0bf9d521eda162" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="classCppLogging_1_1Filter" kindref="compound">Filter</ref> &gt; &gt; &amp;</type>
+        <definition>std::vector&lt;std::shared_ptr&lt;Filter&gt; &gt;&amp; CppLogging::Processor::filters</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>filters</name>
+        <briefdescription>
+<para>Get collection of child filters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processor.h" line="41" column="1" bodyfile="include/logging/processor.h" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1Processor_1ad4fb13124a6a17750549cf263c1f40b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="classCppLogging_1_1Layout" kindref="compound">Layout</ref> &gt; &gt; &amp;</type>
+        <definition>std::vector&lt;std::shared_ptr&lt;Layout&gt; &gt;&amp; CppLogging::Processor::layouts</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>layouts</name>
+        <briefdescription>
+<para>Get collection of child layouts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processor.h" line="43" column="1" bodyfile="include/logging/processor.h" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1Processor_1af4d1515ec036a036b3c21377a9c5c91c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="classCppLogging_1_1Appender" kindref="compound">Appender</ref> &gt; &gt; &amp;</type>
+        <definition>std::vector&lt;std::shared_ptr&lt;Appender&gt; &gt;&amp; CppLogging::Processor::appenders</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>appenders</name>
+        <briefdescription>
+<para>Get collection of child appenders. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processor.h" line="45" column="1" bodyfile="include/logging/processor.h" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1Processor_1ab4d96b6012bee770a07a3f8a25a836a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="classCppLogging_1_1Processor" kindref="compound">Processor</ref> &gt; &gt; &amp;</type>
+        <definition>std::vector&lt;std::shared_ptr&lt;Processor&gt; &gt;&amp; CppLogging::Processor::processors</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>processors</name>
+        <briefdescription>
+<para>Get collection of child processors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processor.h" line="47" column="1" bodyfile="include/logging/processor.h" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1Processor_1a59da9c9fa2d4087b2273096651bc30cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool CppLogging::Processor::ProcessRecord</definition>
+        <argsstring>(Record &amp;record)</argsstring>
+        <name>ProcessRecord</name>
+        <reimplementedby refid="classCppLogging_1_1SyncProcessor_1a2e953a43ccd47756d430507bf46022ce">ProcessRecord</reimplementedby>
+        <reimplementedby refid="classCppLogging_1_1BufferedProcessor_1a30701e34be19af8d41530b9f9d1cf369">ProcessRecord</reimplementedby>
+        <reimplementedby refid="classCppLogging_1_1AsyncProcessor_1a3b078b150836eb0e71b410ddb9f11cf6">ProcessRecord</reimplementedby>
+        <param>
+          <type><ref refid="classCppLogging_1_1Record" kindref="compound">Record</ref> &amp;</type>
+          <declname>record</declname>
+        </param>
+        <briefdescription>
+<para>Process the given logging record through all child filters, layouts and appenders. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Default behavior of the method will take the given logging record and process it in the following sequence:<itemizedlist>
+<listitem><para>all filters (if any present)</para>
+</listitem><listitem><para>all layouts (if any present)</para>
+</listitem><listitem><para>all appenders (if any present)</para>
+</listitem><listitem><para>all sub processors (if any present)</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>record</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Logging record </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&apos;true&apos; if the logging record was successfully processed, &apos;false&apos; if the logging record was filtered out </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processor.h" line="61" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1Processor_1a60a2737b93a6ea1d60e868392377a976" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void CppLogging::Processor::Flush</definition>
+        <argsstring>()</argsstring>
+        <name>Flush</name>
+        <reimplementedby refid="classCppLogging_1_1SyncProcessor_1a1f2679ef17e459163cf1546b4acfae8a">Flush</reimplementedby>
+        <reimplementedby refid="classCppLogging_1_1BufferedProcessor_1a7066881ada040a09270c4f04409d7bb3">Flush</reimplementedby>
+        <reimplementedby refid="classCppLogging_1_1AsyncProcessor_1a826f628ae6f4b6d496fefedb04154ab6">Flush</reimplementedby>
+        <briefdescription>
+<para>Flush the current logging processor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Default behavior of the method will flush in the following sequence:<itemizedlist>
+<listitem><para>all appenders (if any present)</para>
+</listitem><listitem><para>all sub processors (if any present) </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processor.h" line="69" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Logging processor interface. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Logging processor takes an instance of a single logging record and process it though all child filters, layouts and appenders.</para>
+<para>Not thread-safe.</para>
+<para><simplesect kind="see"><para><ref refid="classCppLogging_1_1SyncProcessor" kindref="compound">SyncProcessor</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classCppLogging_1_1AsyncProcessor" kindref="compound">AsyncProcessor</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classCppLogging_1_1BufferedProcessor" kindref="compound">BufferedProcessor</ref> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="83">
+        <label>CppLogging::AsyncProcessor</label>
+        <link refid="classCppLogging_1_1AsyncProcessor"/>
+        <childnode refid="82" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="82">
+        <label>CppLogging::Processor</label>
+        <link refid="classCppLogging_1_1Processor"/>
+      </node>
+      <node id="84">
+        <label>CppLogging::BufferedProcessor</label>
+        <link refid="classCppLogging_1_1BufferedProcessor"/>
+        <childnode refid="82" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="85">
+        <label>CppLogging::SyncProcessor</label>
+        <link refid="classCppLogging_1_1SyncProcessor"/>
+        <childnode refid="82" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="include/logging/processor.h" line="30" column="1" bodyfile="include/logging/processor.h" bodystart="29" bodyend="76"/>
+    <listofallmembers>
+      <member refid="classCppLogging_1_1Processor_1a1be332fe9c9fc637970fd533f2280a89" prot="private" virt="non-virtual"><scope>CppLogging::Processor</scope><name>_appenders</name></member>
+      <member refid="classCppLogging_1_1Processor_1aaef53974adcf8fdc7934d4b739082185" prot="private" virt="non-virtual"><scope>CppLogging::Processor</scope><name>_filters</name></member>
+      <member refid="classCppLogging_1_1Processor_1a9b4e1623afdab4ae7f95806a4b987064" prot="private" virt="non-virtual"><scope>CppLogging::Processor</scope><name>_layouts</name></member>
+      <member refid="classCppLogging_1_1Processor_1ab52ee1a818777d9d9d725c74280f102f" prot="private" virt="non-virtual"><scope>CppLogging::Processor</scope><name>_processors</name></member>
+      <member refid="classCppLogging_1_1Processor_1af4d1515ec036a036b3c21377a9c5c91c" prot="public" virt="non-virtual"><scope>CppLogging::Processor</scope><name>appenders</name></member>
+      <member refid="classCppLogging_1_1Processor_1ae7f724429d96b5a76d0bf9d521eda162" prot="public" virt="non-virtual"><scope>CppLogging::Processor</scope><name>filters</name></member>
+      <member refid="classCppLogging_1_1Processor_1a60a2737b93a6ea1d60e868392377a976" prot="public" virt="virtual"><scope>CppLogging::Processor</scope><name>Flush</name></member>
+      <member refid="classCppLogging_1_1Processor_1ad4fb13124a6a17750549cf263c1f40b1" prot="public" virt="non-virtual"><scope>CppLogging::Processor</scope><name>layouts</name></member>
+      <member refid="classCppLogging_1_1Processor_1af0fb712251609787a41aecb4717d64a1" prot="public" virt="non-virtual"><scope>CppLogging::Processor</scope><name>operator=</name></member>
+      <member refid="classCppLogging_1_1Processor_1a91a5f1520149d34a37bfc91de66830f7" prot="public" virt="non-virtual"><scope>CppLogging::Processor</scope><name>operator=</name></member>
+      <member refid="classCppLogging_1_1Processor_1ab9e8bf067a254854f6f5bb8a108c1105" prot="public" virt="non-virtual"><scope>CppLogging::Processor</scope><name>Processor</name></member>
+      <member refid="classCppLogging_1_1Processor_1a18d2e051692b2ef3096ae5cca6a3ee58" prot="public" virt="non-virtual"><scope>CppLogging::Processor</scope><name>Processor</name></member>
+      <member refid="classCppLogging_1_1Processor_1af909c31ebb473cad9623ca3b84f8cc91" prot="public" virt="non-virtual"><scope>CppLogging::Processor</scope><name>Processor</name></member>
+      <member refid="classCppLogging_1_1Processor_1ab4d96b6012bee770a07a3f8a25a836a3" prot="public" virt="non-virtual"><scope>CppLogging::Processor</scope><name>processors</name></member>
+      <member refid="classCppLogging_1_1Processor_1a59da9c9fa2d4087b2273096651bc30cd" prot="public" virt="virtual"><scope>CppLogging::Processor</scope><name>ProcessRecord</name></member>
+      <member refid="classCppLogging_1_1Processor_1aa232011a6bc4ba37d8acc56158ea43a7" prot="public" virt="virtual"><scope>CppLogging::Processor</scope><name>~Processor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

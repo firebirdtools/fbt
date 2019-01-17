@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="git-help" kind="page">
+    <compoundname>git-help</compoundname>
+    <title>Git help</title>
+    <innerpage refid="git-io">Git io</innerpage>
+    <briefdescription>
+<para>Get started with git in matter of minutes. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Get started with git in matter of minutes.</para>
+<para><itemizedlist>
+<listitem><para><ref refid="git-io" kindref="compound">Git io</ref> </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

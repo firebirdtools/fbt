@@ -1,0 +1,88 @@
+.TH "CppLogging::MemoryAppender" 3 "Thu Jan 17 2019" "CppLogging" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CppLogging::MemoryAppender \- Memory appender\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <memory_appender\&.h>\fP
+.PP
+Inherits \fBCppLogging::Appender\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMemoryAppender\fP (size_t capacity=0)"
+.br
+.RI "Initialize the appender with a given capacity\&. "
+.ti -1c
+.RI "\fBMemoryAppender\fP (const \fBMemoryAppender\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBMemoryAppender\fP (\fBMemoryAppender\fP &&) noexcept=default"
+.br
+.ti -1c
+.RI "\fBMemoryAppender\fP & \fBoperator=\fP (const \fBMemoryAppender\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBMemoryAppender\fP & \fBoperator=\fP (\fBMemoryAppender\fP &&) noexcept=default"
+.br
+.ti -1c
+.RI "std::vector< uint8_t > & \fBbuffer\fP () noexcept"
+.br
+.RI "Get memory buffer\&. "
+.ti -1c
+.RI "const std::vector< uint8_t > & \fBbuffer\fP () const noexcept"
+.br
+.RI "Get constant memory buffer\&. "
+.ti -1c
+.RI "void \fBAppendRecord\fP (\fBRecord\fP &record) override"
+.br
+.RI "Append the given logging record\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Memory appender\&. 
+
+Memory appender collects all given logging records into growing memory buffer with the given initial capacity\&.
+.PP
+Not thread-safe\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CppLogging::MemoryAppender::MemoryAppender (size_t capacity = \fC0\fP)\fC [inline]\fP, \fC [explicit]\fP"
+
+.PP
+Initialize the appender with a given capacity\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcapacity\fP - Memory buffer capacity (default is 0) 
+.RE
+.PP
+
+.PP
+.nf
+30 : _buffer(capacity) {}
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void CppLogging::MemoryAppender::AppendRecord (\fBRecord\fP & record)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Append the given logging record\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrecord\fP - Logging record 
+.RE
+.PP
+
+.PP
+Implements \fBCppLogging::Appender\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CppLogging from the source code\&.

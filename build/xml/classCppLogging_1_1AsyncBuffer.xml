@@ -1,0 +1,354 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classCppLogging_1_1AsyncBuffer" kind="class" language="C++" prot="public">
+    <compoundname>CppLogging::AsyncBuffer</compoundname>
+    <includes refid="async__buffer_8h" local="no">async_buffer.h</includes>
+    <innerclass refid="structCppLogging_1_1AsyncBuffer_1_1Node" prot="private">CppLogging::AsyncBuffer::Node</innerclass>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classCppLogging_1_1AsyncBuffer_1a644e250f9f58699b6a2f4119653c85dd" prot="private" static="no">
+        <type>char</type>
+        <definition>typedef char CppLogging::AsyncBuffer::cache_line_pad[64]</definition>
+        <argsstring>[64]</argsstring>
+        <name>cache_line_pad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processors/async_buffer.h" line="73" column="1" bodyfile="include/logging/processors/async_buffer.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classCppLogging_1_1AsyncBuffer_1a3a2751bb515268391da28734ca70ae96" prot="private" static="no" mutable="no">
+        <type>cache_line_pad</type>
+        <definition>cache_line_pad CppLogging::AsyncBuffer::_pad0</definition>
+        <argsstring></argsstring>
+        <name>_pad0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processors/async_buffer.h" line="75" column="1" bodyfile="include/logging/processors/async_buffer.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCppLogging_1_1AsyncBuffer_1acd3d7753f31dd8c4cfa3d9186d30421c" prot="private" static="no" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t CppLogging::AsyncBuffer::_capacity</definition>
+        <argsstring></argsstring>
+        <name>_capacity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processors/async_buffer.h" line="76" column="1" bodyfile="include/logging/processors/async_buffer.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCppLogging_1_1AsyncBuffer_1a0aeb86f7a753c66392877c126e10069a" prot="private" static="no" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t CppLogging::AsyncBuffer::_mask</definition>
+        <argsstring></argsstring>
+        <name>_mask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processors/async_buffer.h" line="77" column="1" bodyfile="include/logging/processors/async_buffer.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCppLogging_1_1AsyncBuffer_1ac3a70ebc97a946b784c9edf1c6f8b0d7" prot="private" static="no" mutable="no">
+        <type>Node *const</type>
+        <definition>Node* const CppLogging::AsyncBuffer::_buffer</definition>
+        <argsstring></argsstring>
+        <name>_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processors/async_buffer.h" line="78" column="1" bodyfile="include/logging/processors/async_buffer.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCppLogging_1_1AsyncBuffer_1a550bb1a1d38eb2863402c702df7d8c0e" prot="private" static="no" mutable="no">
+        <type>cache_line_pad</type>
+        <definition>cache_line_pad CppLogging::AsyncBuffer::_pad1</definition>
+        <argsstring></argsstring>
+        <name>_pad1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processors/async_buffer.h" line="80" column="1" bodyfile="include/logging/processors/async_buffer.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCppLogging_1_1AsyncBuffer_1a1d1ba1a74d3c5d682f77c165fdae3783" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; size_t &gt;</type>
+        <definition>std::atomic&lt;size_t&gt; CppLogging::AsyncBuffer::_head</definition>
+        <argsstring></argsstring>
+        <name>_head</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processors/async_buffer.h" line="81" column="1" bodyfile="include/logging/processors/async_buffer.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCppLogging_1_1AsyncBuffer_1ab3d21f7d069a2f60ba5373dd51bbd005" prot="private" static="no" mutable="no">
+        <type>cache_line_pad</type>
+        <definition>cache_line_pad CppLogging::AsyncBuffer::_pad2</definition>
+        <argsstring></argsstring>
+        <name>_pad2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processors/async_buffer.h" line="83" column="1" bodyfile="include/logging/processors/async_buffer.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCppLogging_1_1AsyncBuffer_1ad5cd8fb5bd6cccf7c27f9a7029d95bd5" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; size_t &gt;</type>
+        <definition>std::atomic&lt;size_t&gt; CppLogging::AsyncBuffer::_tail</definition>
+        <argsstring></argsstring>
+        <name>_tail</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processors/async_buffer.h" line="84" column="1" bodyfile="include/logging/processors/async_buffer.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCppLogging_1_1AsyncBuffer_1ae7eb3f6d33eb668948ef61966bc6527e" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CppLogging::AsyncBuffer::AsyncBuffer</definition>
+        <argsstring>(size_t capacity)</argsstring>
+        <name>AsyncBuffer</name>
+        <param>
+          <type>size_t</type>
+          <declname>capacity</declname>
+        </param>
+        <briefdescription>
+<para>Default class constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>capacity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Ring buffer capacity (must be a power of two) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processors/async_buffer.h" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1AsyncBuffer_1ab8a3196b5feebecb5239882998cd1589" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CppLogging::AsyncBuffer::AsyncBuffer</definition>
+        <argsstring>(const AsyncBuffer &amp;)=delete</argsstring>
+        <name>AsyncBuffer</name>
+        <param>
+          <type>const <ref refid="classCppLogging_1_1AsyncBuffer" kindref="compound">AsyncBuffer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processors/async_buffer.h" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1AsyncBuffer_1a14838f56aabd25b9b81e1742bbc63b4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CppLogging::AsyncBuffer::AsyncBuffer</definition>
+        <argsstring>(AsyncBuffer &amp;&amp;)=default</argsstring>
+        <name>AsyncBuffer</name>
+        <param>
+          <type><ref refid="classCppLogging_1_1AsyncBuffer" kindref="compound">AsyncBuffer</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processors/async_buffer.h" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1AsyncBuffer_1acbcb54a2a965cc11c0c1e6f63d0b5f5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CppLogging::AsyncBuffer::~AsyncBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>~AsyncBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processors/async_buffer.h" line="42" column="1" bodyfile="include/logging/processors/async_buffer.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1AsyncBuffer_1a0e2bdd1ca2cfc9a8e4be4be9487cd0c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classCppLogging_1_1AsyncBuffer" kindref="compound">AsyncBuffer</ref> &amp;</type>
+        <definition>AsyncBuffer&amp; CppLogging::AsyncBuffer::operator=</definition>
+        <argsstring>(const AsyncBuffer &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classCppLogging_1_1AsyncBuffer" kindref="compound">AsyncBuffer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processors/async_buffer.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1AsyncBuffer_1a104e5aac99e382712799d21e4894683a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classCppLogging_1_1AsyncBuffer" kindref="compound">AsyncBuffer</ref> &amp;</type>
+        <definition>AsyncBuffer&amp; CppLogging::AsyncBuffer::operator=</definition>
+        <argsstring>(AsyncBuffer &amp;&amp;)=default</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classCppLogging_1_1AsyncBuffer" kindref="compound">AsyncBuffer</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processors/async_buffer.h" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1AsyncBuffer_1ab4a7d19933ed60cdf4a07e4732e5f966" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t CppLogging::AsyncBuffer::capacity</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>capacity</name>
+        <briefdescription>
+<para>Get ring buffer capacity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processors/async_buffer.h" line="48" column="1" bodyfile="include/logging/processors/async_buffer.h" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1AsyncBuffer_1af69c09a3e48091d02f726e13b29443d4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t CppLogging::AsyncBuffer::size</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>size</name>
+        <briefdescription>
+<para>Get ring buffer size. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processors/async_buffer.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1AsyncBuffer_1a9db4993d859111d09a1b1bc23b3a787d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CppLogging::AsyncBuffer::Enqueue</definition>
+        <argsstring>(Record &amp;record)</argsstring>
+        <name>Enqueue</name>
+        <param>
+          <type><ref refid="classCppLogging_1_1Record" kindref="compound">Record</ref> &amp;</type>
+          <declname>record</declname>
+        </param>
+        <briefdescription>
+<para>Enqueue and swap the logging record into the ring buffer (multiple producers threads method) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>record</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Logging record to enqueue and swap </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&apos;true&apos; if the item was successfully enqueue, &apos;false&apos; if the ring buffer is full </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processors/async_buffer.h" line="57" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1AsyncBuffer_1a83acbdf7abb012e6379f4001b1a4d8ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CppLogging::AsyncBuffer::Dequeue</definition>
+        <argsstring>(Record &amp;record)</argsstring>
+        <name>Dequeue</name>
+        <param>
+          <type><ref refid="classCppLogging_1_1Record" kindref="compound">Record</ref> &amp;</type>
+          <declname>record</declname>
+        </param>
+        <briefdescription>
+<para>Dequeue and swap the logging record from the ring buffer (multiple consumers threads method) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>record</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Logging record to dequeue and swap </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&apos;true&apos; if the item was successfully dequeue, &apos;false&apos; if the ring buffer is empty </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/processors/async_buffer.h" line="64" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Asynchronous logging buffer. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Multiple producers / multiple consumers wait-free ring buffer use only atomic operations to provide thread-safe enqueue and dequeue operations. Ring buffer size is limited to the capacity provided in the constructor.</para>
+<para>FIFO order is guaranteed!</para>
+<para>C++ implementation of Dmitry Vyukov&apos;s non-intrusive lock free unbound MPSC queue <ulink url="http://www.1024cores.net/home/lock-free-algorithms/queues/non-intrusive-mpsc-node-based-queue">http://www.1024cores.net/home/lock-free-algorithms/queues/non-intrusive-mpsc-node-based-queue</ulink> </para>
+    </detaileddescription>
+    <location file="include/logging/processors/async_buffer.h" line="33" column="1" bodyfile="include/logging/processors/async_buffer.h" bodystart="32" bodyend="85"/>
+    <listofallmembers>
+      <member refid="classCppLogging_1_1AsyncBuffer_1ac3a70ebc97a946b784c9edf1c6f8b0d7" prot="private" virt="non-virtual"><scope>CppLogging::AsyncBuffer</scope><name>_buffer</name></member>
+      <member refid="classCppLogging_1_1AsyncBuffer_1acd3d7753f31dd8c4cfa3d9186d30421c" prot="private" virt="non-virtual"><scope>CppLogging::AsyncBuffer</scope><name>_capacity</name></member>
+      <member refid="classCppLogging_1_1AsyncBuffer_1a1d1ba1a74d3c5d682f77c165fdae3783" prot="private" virt="non-virtual"><scope>CppLogging::AsyncBuffer</scope><name>_head</name></member>
+      <member refid="classCppLogging_1_1AsyncBuffer_1a0aeb86f7a753c66392877c126e10069a" prot="private" virt="non-virtual"><scope>CppLogging::AsyncBuffer</scope><name>_mask</name></member>
+      <member refid="classCppLogging_1_1AsyncBuffer_1a3a2751bb515268391da28734ca70ae96" prot="private" virt="non-virtual"><scope>CppLogging::AsyncBuffer</scope><name>_pad0</name></member>
+      <member refid="classCppLogging_1_1AsyncBuffer_1a550bb1a1d38eb2863402c702df7d8c0e" prot="private" virt="non-virtual"><scope>CppLogging::AsyncBuffer</scope><name>_pad1</name></member>
+      <member refid="classCppLogging_1_1AsyncBuffer_1ab3d21f7d069a2f60ba5373dd51bbd005" prot="private" virt="non-virtual"><scope>CppLogging::AsyncBuffer</scope><name>_pad2</name></member>
+      <member refid="classCppLogging_1_1AsyncBuffer_1ad5cd8fb5bd6cccf7c27f9a7029d95bd5" prot="private" virt="non-virtual"><scope>CppLogging::AsyncBuffer</scope><name>_tail</name></member>
+      <member refid="classCppLogging_1_1AsyncBuffer_1ae7eb3f6d33eb668948ef61966bc6527e" prot="public" virt="non-virtual"><scope>CppLogging::AsyncBuffer</scope><name>AsyncBuffer</name></member>
+      <member refid="classCppLogging_1_1AsyncBuffer_1ab8a3196b5feebecb5239882998cd1589" prot="public" virt="non-virtual"><scope>CppLogging::AsyncBuffer</scope><name>AsyncBuffer</name></member>
+      <member refid="classCppLogging_1_1AsyncBuffer_1a14838f56aabd25b9b81e1742bbc63b4f" prot="public" virt="non-virtual"><scope>CppLogging::AsyncBuffer</scope><name>AsyncBuffer</name></member>
+      <member refid="classCppLogging_1_1AsyncBuffer_1a644e250f9f58699b6a2f4119653c85dd" prot="private" virt="non-virtual"><scope>CppLogging::AsyncBuffer</scope><name>cache_line_pad</name></member>
+      <member refid="classCppLogging_1_1AsyncBuffer_1ab4a7d19933ed60cdf4a07e4732e5f966" prot="public" virt="non-virtual"><scope>CppLogging::AsyncBuffer</scope><name>capacity</name></member>
+      <member refid="classCppLogging_1_1AsyncBuffer_1a83acbdf7abb012e6379f4001b1a4d8ee" prot="public" virt="non-virtual"><scope>CppLogging::AsyncBuffer</scope><name>Dequeue</name></member>
+      <member refid="classCppLogging_1_1AsyncBuffer_1a9db4993d859111d09a1b1bc23b3a787d" prot="public" virt="non-virtual"><scope>CppLogging::AsyncBuffer</scope><name>Enqueue</name></member>
+      <member refid="classCppLogging_1_1AsyncBuffer_1a0e2bdd1ca2cfc9a8e4be4be9487cd0c7" prot="public" virt="non-virtual"><scope>CppLogging::AsyncBuffer</scope><name>operator=</name></member>
+      <member refid="classCppLogging_1_1AsyncBuffer_1a104e5aac99e382712799d21e4894683a" prot="public" virt="non-virtual"><scope>CppLogging::AsyncBuffer</scope><name>operator=</name></member>
+      <member refid="classCppLogging_1_1AsyncBuffer_1af69c09a3e48091d02f726e13b29443d4" prot="public" virt="non-virtual"><scope>CppLogging::AsyncBuffer</scope><name>size</name></member>
+      <member refid="classCppLogging_1_1AsyncBuffer_1acbcb54a2a965cc11c0c1e6f63d0b5f5a" prot="public" virt="non-virtual"><scope>CppLogging::AsyncBuffer</scope><name>~AsyncBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classCppLogging_1_1Filter" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>CppLogging::Filter</compoundname>
+    <derivedcompoundref refid="classCppLogging_1_1LevelFilter" prot="public" virt="non-virtual">CppLogging::LevelFilter</derivedcompoundref>
+    <derivedcompoundref refid="classCppLogging_1_1LoggerFilter" prot="public" virt="non-virtual">CppLogging::LoggerFilter</derivedcompoundref>
+    <derivedcompoundref refid="classCppLogging_1_1MessageFilter" prot="public" virt="non-virtual">CppLogging::MessageFilter</derivedcompoundref>
+    <derivedcompoundref refid="classCppLogging_1_1Trigger" prot="public" virt="non-virtual">CppLogging::Trigger</derivedcompoundref>
+    <includes refid="filter_8h" local="no">filter.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCppLogging_1_1Filter_1af8e8cba41c936d1d3c10476091bd44b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool CppLogging::Filter::FilterRecord</definition>
+        <argsstring>(Record &amp;record)=0</argsstring>
+        <name>FilterRecord</name>
+        <reimplementedby refid="classCppLogging_1_1MessageFilter_1af4d859d9a5eaad69c6493b5a49cded33">FilterRecord</reimplementedby>
+        <reimplementedby refid="classCppLogging_1_1LoggerFilter_1a8dd29c033a83741a576730e0e4645372">FilterRecord</reimplementedby>
+        <reimplementedby refid="classCppLogging_1_1LevelFilter_1accab31d29bc8d4eb53e9764b673764bd">FilterRecord</reimplementedby>
+        <reimplementedby refid="classCppLogging_1_1Trigger_1ae4c42b3297782c613133c18e73ec5f3d">FilterRecord</reimplementedby>
+        <param>
+          <type><ref refid="classCppLogging_1_1Record" kindref="compound">Record</ref> &amp;</type>
+          <declname>record</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classCppLogging_1_1Filter" kindref="compound">Filter</ref> the given logging record. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>record</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Logging record </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&apos;true&apos; if the logging record should be processed, &apos;false&apos; if the logging record was filtered out </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/filter.h" line="34" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Logging filter interface. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Logging filter takes an instance of a single logging record and performs some checks to detect if the record should be filered out and not processed anymore.</para>
+<para><simplesect kind="see"><para><ref refid="classCppLogging_1_1LoggerFilter" kindref="compound">LoggerFilter</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classCppLogging_1_1LevelFilter" kindref="compound">LevelFilter</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classCppLogging_1_1MessageFilter" kindref="compound">MessageFilter</ref> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="47">
+        <label>CppLogging::Trigger</label>
+        <link refid="classCppLogging_1_1Trigger"/>
+        <childnode refid="43" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>CppLogging::Filter</label>
+        <link refid="classCppLogging_1_1Filter"/>
+      </node>
+      <node id="44">
+        <label>CppLogging::LevelFilter</label>
+        <link refid="classCppLogging_1_1LevelFilter"/>
+        <childnode refid="43" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>CppLogging::LoggerFilter</label>
+        <link refid="classCppLogging_1_1LoggerFilter"/>
+        <childnode refid="43" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>CppLogging::MessageFilter</label>
+        <link refid="classCppLogging_1_1MessageFilter"/>
+        <childnode refid="43" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="include/logging/filter.h" line="27" column="1" bodyfile="include/logging/filter.h" bodystart="26" bodyend="35"/>
+    <listofallmembers>
+      <member refid="classCppLogging_1_1Filter_1af8e8cba41c936d1d3c10476091bd44b2" prot="public" virt="pure-virtual"><scope>CppLogging::Filter</scope><name>FilterRecord</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,119 @@
+.TH "CppLogging::TextLayout" 3 "Thu Jan 17 2019" "CppLogging" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CppLogging::TextLayout \- Text layout\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <text_layout\&.h>\fP
+.PP
+Inherits \fBCppLogging::Layout\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTextLayout\fP (const std::string &\fBpattern\fP='{UtcDateTime} [{Thread}] {\fBLevel\fP} {\fBLogger\fP} \- {Message}{EndLine}')"
+.br
+.RI "Initialize text logging layout with a given pattern\&. "
+.ti -1c
+.RI "\fBTextLayout\fP (const \fBTextLayout\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBTextLayout\fP (\fBTextLayout\fP &&layout) noexcept"
+.br
+.ti -1c
+.RI "\fBTextLayout\fP & \fBoperator=\fP (const \fBTextLayout\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBTextLayout\fP & \fBoperator=\fP (\fBTextLayout\fP &&layout) noexcept"
+.br
+.ti -1c
+.RI "const std::string & \fBpattern\fP () const noexcept"
+.br
+.RI "Get the text layout pattern\&. "
+.ti -1c
+.RI "void \fBLayoutRecord\fP (\fBRecord\fP &record) override"
+.br
+.RI "\fBLayout\fP the given logging record into a raw buffer\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Text layout\&. 
+
+Text layout converts the given logging record into the text string using a given pattern\&. Text layout pattern is a string with a special placeholders provided inside curly brackets ('{}')\&.
+.PP
+Supported placeholders:
+.IP "\(bu" 2
+{UtcDateTime} / {LocalDateTime} - converted to the UTC/local date & time (e\&.g\&. '1997-07-16T19:20:30\&.123Z' / '1997-07-16T19:20:30\&.123+01:00')
+.IP "\(bu" 2
+{UtcDate} / {LocalDate} - converted to the UTC/local date (e\&.g\&. '1997-07-16')
+.IP "\(bu" 2
+{Time} / {LocalTime} - converted to the UTC/local time (e\&.g\&. '19:20:30\&.123Z' / '19:20:30\&.123+01:00')
+.IP "\(bu" 2
+{UtcYear} / {LocalYear} - converted to the UTC/local four-digits year (e\&.g\&. '1997')
+.IP "\(bu" 2
+{UtcMonth} / {LocalMonth} - converted to the UTC/local two-digits month (e\&.g\&. '07')
+.IP "\(bu" 2
+{UtcDay} / {LocalDay} - converted to the UTC/local two-digits day (e\&.g\&. '16')
+.IP "\(bu" 2
+{UtcHour} / {LocalHour} - converted to the UTC/local two-digits hour (e\&.g\&. '19')
+.IP "\(bu" 2
+{UtcMinute} / {LocalMinute} - converted to the UTC/local two-digits minute (e\&.g\&. '20')
+.IP "\(bu" 2
+{UtcSecond} / {LocalSecond} - converted to the UTC/local two-digits second (e\&.g\&. '30')
+.IP "\(bu" 2
+{UtcTimezone} / {LocalTimezone} - converted to the UTC/local timezone suffix (e\&.g\&. 'Z' / '+01:00')
+.IP "\(bu" 2
+{Millisecond} - converted to the three-digits millisecond (e\&.g\&. '123')
+.IP "\(bu" 2
+{Microsecond} - converted to the three-digits microsecond (e\&.g\&. '123')
+.IP "\(bu" 2
+{Nanosecond} - converted to the three-digits nanosecond (e\&.g\&. '789')
+.IP "\(bu" 2
+{Thread} - converted to the thread Id (e\&.g\&. '0x0028F3D8')
+.IP "\(bu" 2
+{Level} - converted to the logging level
+.IP "\(bu" 2
+{\fBLogger\fP} - converted to the logger name
+.IP "\(bu" 2
+{Message} - converted to the log message
+.IP "\(bu" 2
+{EndLine} - converted to the end line suffix (e\&.g\&. Unix '\\n' or Windows '\\r\\n')
+.PP
+.PP
+Thread-safe\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CppLogging::TextLayout::TextLayout (const std::string & pattern = \fC'{UtcDateTime} [{Thread}] {\fBLevel\fP} {\fBLogger\fP} \- {Message}{EndLine}'\fP)\fC [explicit]\fP"
+
+.PP
+Initialize text logging layout with a given pattern\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpattern\fP - \fBLayout\fP pattern 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void CppLogging::TextLayout::LayoutRecord (\fBRecord\fP & record)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBLayout\fP the given logging record into a raw buffer\&. This method will update the raw filed of the given logging record\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrecord\fP - Logging record 
+.RE
+.PP
+
+.PP
+Implements \fBCppLogging::Layout\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CppLogging from the source code\&.

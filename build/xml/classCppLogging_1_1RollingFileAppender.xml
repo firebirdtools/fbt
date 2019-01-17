@@ -1,0 +1,484 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classCppLogging_1_1RollingFileAppender" kind="class" language="C++" prot="public">
+    <compoundname>CppLogging::RollingFileAppender</compoundname>
+    <basecompoundref refid="classCppLogging_1_1Appender" prot="public" virt="non-virtual">CppLogging::Appender</basecompoundref>
+    <includes refid="rolling__file__appender_8h" local="no">rolling_file_appender.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classCppLogging_1_1RollingFileAppender_1a0d453fa68a659898193acb608bf94cda" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class SizePolicyImpl</definition>
+        <argsstring></argsstring>
+        <name>SizePolicyImpl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/appenders/rolling_file_appender.h" line="52" column="1" bodyfile="include/logging/appenders/rolling_file_appender.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classCppLogging_1_1RollingFileAppender_1a6d81316f3ffde8a367df1396d02a7d6f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class TimePolicyImpl</definition>
+        <argsstring></argsstring>
+        <name>TimePolicyImpl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/appenders/rolling_file_appender.h" line="53" column="1" bodyfile="include/logging/appenders/rolling_file_appender.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classCppLogging_1_1RollingFileAppender_1a0b9f4f09485a29df03172234b156880c" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; Impl &gt;</type>
+        <definition>std::unique_ptr&lt;Impl&gt; CppLogging::RollingFileAppender::_pimpl</definition>
+        <argsstring></argsstring>
+        <name>_pimpl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/appenders/rolling_file_appender.h" line="125" column="1" bodyfile="include/logging/appenders/rolling_file_appender.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCppLogging_1_1RollingFileAppender_1a8227d016c9848a0b5c224df131063d64" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CppLogging::RollingFileAppender::RollingFileAppender</definition>
+        <argsstring>(const CppCommon::Path &amp;path, TimeRollingPolicy policy=TimeRollingPolicy::DAY, const std::string &amp;pattern=&quot;{UtcDateTime}.log&quot;, bool archive=false, bool truncate=false, bool auto_flush=false)</argsstring>
+        <name>RollingFileAppender</name>
+        <param>
+          <type>const CppCommon::Path &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceCppLogging_1a2ae7ad16f5b402d86a07604253464f57" kindref="member">TimeRollingPolicy</ref></type>
+          <declname>policy</declname>
+          <defval><ref refid="namespaceCppLogging_1a2ae7ad16f5b402d86a07604253464f57a5b1d59b5451c06afb65ab1bc2713cfb4" kindref="member">TimeRollingPolicy::DAY</ref></defval>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>pattern</declname>
+          <defval>&quot;{UtcDateTime}.log&quot;</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>archive</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>truncate</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>auto_flush</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Initialize the rolling file appender with a time-based policy. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Time-based policy composes logging filename from the given pattern using the following placeholders:<itemizedlist>
+<listitem><para>{UtcDateTime} / {LocalDateTime} - converted to the UTC/local date &amp; time (e.g. &quot;1997-07-16T192030Z&quot; / &quot;1997-07-16T192030+0100&quot;)</para>
+</listitem><listitem><para>{UtcDate} / {LocalDate} - converted to the UTC/local date (e.g. &quot;1997-07-16&quot;)</para>
+</listitem><listitem><para>{Time} / {LocalTime} - converted to the UTC/local time (e.g. &quot;192030Z&quot; / &quot;192030+0100&quot;)</para>
+</listitem><listitem><para>{UtcYear} / {LocalYear} - converted to the UTC/local four-digits year (e.g. &quot;1997&quot;)</para>
+</listitem><listitem><para>{UtcMonth} / {LocalMonth} - converted to the UTC/local two-digits month (e.g. &quot;07&quot;)</para>
+</listitem><listitem><para>{UtcDay} / {LocalDay} - converted to the UTC/local two-digits day (e.g. &quot;16&quot;)</para>
+</listitem><listitem><para>{UtcHour} / {LocalHour} - converted to the UTC/local two-digits hour (e.g. &quot;19&quot;)</para>
+</listitem><listitem><para>{UtcMinute} / {LocalMinute} - converted to the UTC/local two-digits minute (e.g. &quot;20&quot;)</para>
+</listitem><listitem><para>{UtcSecond} / {LocalSecond} - converted to the UTC/local two-digits second (e.g. &quot;30&quot;)</para>
+</listitem><listitem><para>{UtcTimezone} / {LocalTimezone} - converted to the UTC/local timezone suffix (e.g. &quot;Z&quot; / &quot;+0100&quot;)</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Logging path </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>policy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Time-based rolling policy (default is <ref refid="namespaceCppLogging_1a2ae7ad16f5b402d86a07604253464f57a5b1d59b5451c06afb65ab1bc2713cfb4" kindref="member">TimeRollingPolicy::DAY</ref>) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pattern</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Logging pattern (default is &quot;{UtcDateTime}.log&quot;) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>archive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Archivation flag (default is false) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>truncate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Truncate flag (default is false) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>auto_flush</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Auto-flush flag (default is false) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/appenders/rolling_file_appender.h" line="78" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1RollingFileAppender_1aec5894fa4d8f2f9e11ade7e3285e5eef" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CppLogging::RollingFileAppender::RollingFileAppender</definition>
+        <argsstring>(const CppCommon::Path &amp;path, const std::string &amp;filename, const std::string &amp;extension, size_t size=104857600, size_t backups=10, bool archive=false, bool truncate=false, bool auto_flush=false)</argsstring>
+        <name>RollingFileAppender</name>
+        <param>
+          <type>const CppCommon::Path &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>extension</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+          <defval>104857600</defval>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>backups</declname>
+          <defval>10</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>archive</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>truncate</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>auto_flush</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Initialize the rolling file appender with a size-based policy. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Size-based policy for 5 backups works in a following way:</para>
+<para>example.log -&gt; example.1.log example.1.log -&gt; example.2.log example.2.log -&gt; example.3.log example.3.log -&gt; example.4.log example.4.log -&gt; example.5.log example.5.log -&gt; remove</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Logging path </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Logging filename </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>extension</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Logging extension </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Rolling size limit in bytes (default is 100 megabytes) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>backups</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Rolling backups count (default is 10) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>archive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Archivation flag (default is false) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>truncate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Truncate flag (default is false) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>auto_flush</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Auto-flush flag (default is false) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/appenders/rolling_file_appender.h" line="99" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1RollingFileAppender_1abcf828106ffc0f8df6fbd4b447d23c8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CppLogging::RollingFileAppender::RollingFileAppender</definition>
+        <argsstring>(const RollingFileAppender &amp;)=delete</argsstring>
+        <name>RollingFileAppender</name>
+        <param>
+          <type>const <ref refid="classCppLogging_1_1RollingFileAppender" kindref="compound">RollingFileAppender</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/appenders/rolling_file_appender.h" line="100" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1RollingFileAppender_1a6eeba6d9f179a8fb2605030591db7fea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CppLogging::RollingFileAppender::RollingFileAppender</definition>
+        <argsstring>(RollingFileAppender &amp;&amp;appender) noexcept</argsstring>
+        <name>RollingFileAppender</name>
+        <param>
+          <type><ref refid="classCppLogging_1_1RollingFileAppender" kindref="compound">RollingFileAppender</ref> &amp;&amp;</type>
+          <declname>appender</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/appenders/rolling_file_appender.h" line="101" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1RollingFileAppender_1a06432d9042789699e808215eaddad0c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual CppLogging::RollingFileAppender::~RollingFileAppender</definition>
+        <argsstring>()</argsstring>
+        <name>~RollingFileAppender</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/appenders/rolling_file_appender.h" line="102" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1RollingFileAppender_1aca10e07559d6f0266905302e21b42150" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classCppLogging_1_1RollingFileAppender" kindref="compound">RollingFileAppender</ref> &amp;</type>
+        <definition>RollingFileAppender&amp; CppLogging::RollingFileAppender::operator=</definition>
+        <argsstring>(const RollingFileAppender &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classCppLogging_1_1RollingFileAppender" kindref="compound">RollingFileAppender</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/appenders/rolling_file_appender.h" line="104" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1RollingFileAppender_1a57ebf5df38bd82743293e56ca8bac86b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classCppLogging_1_1RollingFileAppender" kindref="compound">RollingFileAppender</ref> &amp;</type>
+        <definition>RollingFileAppender&amp; CppLogging::RollingFileAppender::operator=</definition>
+        <argsstring>(RollingFileAppender &amp;&amp;appender) noexcept</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classCppLogging_1_1RollingFileAppender" kindref="compound">RollingFileAppender</ref> &amp;&amp;</type>
+          <declname>appender</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/appenders/rolling_file_appender.h" line="105" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1RollingFileAppender_1a5d4b2e45b751819063a6e9c5edd81bbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CppLogging::RollingFileAppender::AppendRecord</definition>
+        <argsstring>(Record &amp;record) override</argsstring>
+        <name>AppendRecord</name>
+        <reimplements refid="classCppLogging_1_1Appender_1a770dfe9cd6d1f22a66582bed758a7b4e">AppendRecord</reimplements>
+        <param>
+          <type><ref refid="classCppLogging_1_1Record" kindref="compound">Record</ref> &amp;</type>
+          <declname>record</declname>
+        </param>
+        <briefdescription>
+<para>Append the given logging record. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>record</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Logging record </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/appenders/rolling_file_appender.h" line="108" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1RollingFileAppender_1abe1e794f13149844125945f1a7c2325d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CppLogging::RollingFileAppender::Flush</definition>
+        <argsstring>() override</argsstring>
+        <name>Flush</name>
+        <reimplements refid="classCppLogging_1_1Appender_1a6f6ebd942c5045e8b07d100fe5656ee6">Flush</reimplements>
+        <briefdescription>
+<para>Flush the logging appender. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/appenders/rolling_file_appender.h" line="109" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classCppLogging_1_1RollingFileAppender_1a083dbba2f296cc6d4a36c1c85c62ff76" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void CppLogging::RollingFileAppender::onArchiveThreadInitialize</definition>
+        <argsstring>()</argsstring>
+        <name>onArchiveThreadInitialize</name>
+        <briefdescription>
+<para>Initialize archivation thread handler. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This handler can be used to initialize priority or affinity of the archivation thread. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/appenders/rolling_file_appender.h" line="116" column="1" bodyfile="include/logging/appenders/rolling_file_appender.h" bodystart="116" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1RollingFileAppender_1ae4ed2ebcd718524d3df9b3c56766bc35" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void CppLogging::RollingFileAppender::onArchiveThreadCleanup</definition>
+        <argsstring>()</argsstring>
+        <name>onArchiveThreadCleanup</name>
+        <briefdescription>
+<para>Cleanup archivation thread handler. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This handler can be used to cleanup priority or affinity of the archivation thread. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/appenders/rolling_file_appender.h" line="121" column="1" bodyfile="include/logging/appenders/rolling_file_appender.h" bodystart="121" bodyend="121"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Rolling file appender. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Rolling file appender writes the given logging record into the file and performs file rolling operation depends on the given policy. In case of any IO error this appender will lost the logging record, but try to recover from fail in a short interval of 100ms.</para>
+<para>Time-based rolling policy will create a new logging file to write into using a special pattern (contains date &amp; time placeholders).</para>
+<para>Size-based rolling policy will create a new logging file to write when the current file size exceeded size limit. Logging backups are indexed and its count could be limited as well.</para>
+<para>It is possible to enable archivation of the logging backups in a background thread.</para>
+<para>Not thread-safe. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="90">
+        <label>CppLogging::Appender</label>
+        <link refid="classCppLogging_1_1Appender"/>
+      </node>
+      <node id="89">
+        <label>CppLogging::RollingFileAppender</label>
+        <link refid="classCppLogging_1_1RollingFileAppender"/>
+        <childnode refid="90" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="92">
+        <label>CppLogging::Appender</label>
+        <link refid="classCppLogging_1_1Appender"/>
+      </node>
+      <node id="91">
+        <label>CppLogging::RollingFileAppender</label>
+        <link refid="classCppLogging_1_1RollingFileAppender"/>
+        <childnode refid="92" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/logging/appenders/rolling_file_appender.h" line="51" column="1" bodyfile="include/logging/appenders/rolling_file_appender.h" bodystart="50" bodyend="126"/>
+    <listofallmembers>
+      <member refid="classCppLogging_1_1RollingFileAppender_1a0b9f4f09485a29df03172234b156880c" prot="private" virt="non-virtual"><scope>CppLogging::RollingFileAppender</scope><name>_pimpl</name></member>
+      <member refid="classCppLogging_1_1RollingFileAppender_1a5d4b2e45b751819063a6e9c5edd81bbf" prot="public" virt="virtual"><scope>CppLogging::RollingFileAppender</scope><name>AppendRecord</name></member>
+      <member refid="classCppLogging_1_1RollingFileAppender_1abe1e794f13149844125945f1a7c2325d" prot="public" virt="virtual"><scope>CppLogging::RollingFileAppender</scope><name>Flush</name></member>
+      <member refid="classCppLogging_1_1RollingFileAppender_1ae4ed2ebcd718524d3df9b3c56766bc35" prot="protected" virt="virtual"><scope>CppLogging::RollingFileAppender</scope><name>onArchiveThreadCleanup</name></member>
+      <member refid="classCppLogging_1_1RollingFileAppender_1a083dbba2f296cc6d4a36c1c85c62ff76" prot="protected" virt="virtual"><scope>CppLogging::RollingFileAppender</scope><name>onArchiveThreadInitialize</name></member>
+      <member refid="classCppLogging_1_1RollingFileAppender_1aca10e07559d6f0266905302e21b42150" prot="public" virt="non-virtual"><scope>CppLogging::RollingFileAppender</scope><name>operator=</name></member>
+      <member refid="classCppLogging_1_1RollingFileAppender_1a57ebf5df38bd82743293e56ca8bac86b" prot="public" virt="non-virtual"><scope>CppLogging::RollingFileAppender</scope><name>operator=</name></member>
+      <member refid="classCppLogging_1_1RollingFileAppender_1a8227d016c9848a0b5c224df131063d64" prot="public" virt="non-virtual"><scope>CppLogging::RollingFileAppender</scope><name>RollingFileAppender</name></member>
+      <member refid="classCppLogging_1_1RollingFileAppender_1aec5894fa4d8f2f9e11ade7e3285e5eef" prot="public" virt="non-virtual"><scope>CppLogging::RollingFileAppender</scope><name>RollingFileAppender</name></member>
+      <member refid="classCppLogging_1_1RollingFileAppender_1abcf828106ffc0f8df6fbd4b447d23c8b" prot="public" virt="non-virtual"><scope>CppLogging::RollingFileAppender</scope><name>RollingFileAppender</name></member>
+      <member refid="classCppLogging_1_1RollingFileAppender_1a6eeba6d9f179a8fb2605030591db7fea" prot="public" virt="non-virtual"><scope>CppLogging::RollingFileAppender</scope><name>RollingFileAppender</name></member>
+      <member refid="classCppLogging_1_1RollingFileAppender_1a0d453fa68a659898193acb608bf94cda" prot="private" virt="non-virtual"><scope>CppLogging::RollingFileAppender</scope><name>SizePolicyImpl</name></member>
+      <member refid="classCppLogging_1_1RollingFileAppender_1a6d81316f3ffde8a367df1396d02a7d6f" prot="private" virt="non-virtual"><scope>CppLogging::RollingFileAppender</scope><name>TimePolicyImpl</name></member>
+      <member refid="classCppLogging_1_1RollingFileAppender_1a06432d9042789699e808215eaddad0c0" prot="public" virt="virtual"><scope>CppLogging::RollingFileAppender</scope><name>~RollingFileAppender</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

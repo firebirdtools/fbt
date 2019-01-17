@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="03-first" kind="page">
+    <compoundname>03-first</compoundname>
+    <title>First</title>
+    <innerpage refid="other-page">Other page</innerpage>
+    <innerpage refid="yet-another-subpage">Yet another subpage</innerpage>
+    <innerpage refid="a-subpage">A subpage</innerpage>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Contents of first page, with subpages.</para>
+<para><itemizedlist>
+<listitem><para><ref refid="other-page" kindref="compound">Other page</ref></para>
+</listitem><listitem><para><ref refid="yet-another-subpage" kindref="compound">Yet another subpage</ref></para>
+</listitem><listitem><para><ref refid="a-subpage" kindref="compound">A subpage</ref> </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

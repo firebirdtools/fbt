@@ -1,0 +1,111 @@
+.TH "CppLogging::Config" 3 "Thu Jan 17 2019" "CppLogging" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CppLogging::Config \- \fBLogger\fP configuration static class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <config\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConfig\fP (const \fBConfig\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBConfig\fP (\fBConfig\fP &&) noexcept=delete"
+.br
+.ti -1c
+.RI "\fBConfig\fP & \fBoperator=\fP (const \fBConfig\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBConfig\fP & \fBoperator=\fP (\fBConfig\fP &&) noexcept=delete"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBConfigLogger\fP (const std::shared_ptr< \fBProcessor\fP > &sink)"
+.br
+.RI "Configure default logger with a given logging sink processor\&. "
+.ti -1c
+.RI "static void \fBConfigLogger\fP (const std::string &name, const std::shared_ptr< \fBProcessor\fP > &sink)"
+.br
+.RI "Configure named logger with a given logging sink processor\&. "
+.ti -1c
+.RI "static \fBLogger\fP \fBCreateLogger\fP ()"
+.br
+.RI "Create default logger\&. "
+.ti -1c
+.RI "static \fBLogger\fP \fBCreateLogger\fP (const std::string &name)"
+.br
+.RI "Create named logger\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBLogger\fP configuration static class\&. 
+
+\fBLogger\fP configuration provides static interface to configure loggers\&.
+.PP
+Thread-safe\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "static void CppLogging::Config::ConfigLogger (const std::shared_ptr< \fBProcessor\fP > & sink)\fC [static]\fP"
+
+.PP
+Configure default logger with a given logging sink processor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsink\fP - Logging sink processor 
+.RE
+.PP
+
+.SS "static void CppLogging::Config::ConfigLogger (const std::string & name, const std::shared_ptr< \fBProcessor\fP > & sink)\fC [static]\fP"
+
+.PP
+Configure named logger with a given logging sink processor\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIname\fP - \fBLogger\fP name 
+.br
+\fIsink\fP - Logging sink processor 
+.RE
+.PP
+
+.SS "static \fBLogger\fP CppLogging::Config::CreateLogger ()\fC [static]\fP"
+
+.PP
+Create default logger\&. If the default logger was not configured before it will be automatically configured to a one with \fBTextLayout\fP and \fBConsoleAppender\fP\&.
+.PP
+\fBReturns:\fP
+.RS 4
+Created instance of the default logger 
+.RE
+.PP
+
+.SS "static \fBLogger\fP CppLogging::Config::CreateLogger (const std::string & name)\fC [static]\fP"
+
+.PP
+Create named logger\&. If the named logger was not configured before an instance of the default logger will be returned\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIname\fP - \fBLogger\fP name 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Created instance of the named logger 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CppLogging from the source code\&.

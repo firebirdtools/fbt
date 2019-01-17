@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>C++ Logging Library</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>C++ Logging Library provides functionality to log different events with a high throughput in multi-thread environment into different sinks (console, files, rolling files, syslog, etc.). Logging configuration is very flexible and gives functionality to build flexible logger hierarchy with combination of logging processors (sync, async), filters, layouts (binary, text) and appenders.</para>
+<para>This document contains <ref refid="namespaceCppLogging" kindref="compound">CppLogging</ref> API references.</para>
+<para>Library description, features, requirements and usage examples can be find on GitHub: <ulink url="https://github.com/chronoxor/CppLogging">https://github.com/chronoxor/CppLogging</ulink> </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,84 @@
+.TH "CppLogging::FileAppender" 3 "Thu Jan 17 2019" "CppLogging" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CppLogging::FileAppender \- File appender\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <file_appender\&.h>\fP
+.PP
+Inherits \fBCppLogging::Appender\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFileAppender\fP (const CppCommon::File &file, bool truncate=false, bool auto_flush=false)"
+.br
+.RI "Initialize the appender with a given file, truncate/append and auto-flush flags\&. "
+.ti -1c
+.RI "\fBFileAppender\fP (const \fBFileAppender\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBFileAppender\fP (\fBFileAppender\fP &&)=default"
+.br
+.ti -1c
+.RI "\fBFileAppender\fP & \fBoperator=\fP (const \fBFileAppender\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBFileAppender\fP & \fBoperator=\fP (\fBFileAppender\fP &&)=default"
+.br
+.ti -1c
+.RI "void \fBAppendRecord\fP (\fBRecord\fP &record) override"
+.br
+.RI "Append the given logging record\&. "
+.ti -1c
+.RI "void \fBFlush\fP () override"
+.br
+.RI "Flush the logging appender\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+File appender\&. 
+
+File appender writes the given logging record into the file with the given file name\&. In case of any IO error this appender will lost the logging record, but try to recover from fail in a short interval of 100ms\&.
+.PP
+Not thread-safe\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CppLogging::FileAppender::FileAppender (const CppCommon::File & file, bool truncate = \fCfalse\fP, bool auto_flush = \fCfalse\fP)\fC [explicit]\fP"
+
+.PP
+Initialize the appender with a given file, truncate/append and auto-flush flags\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfile\fP - File 
+.br
+\fItruncate\fP - Truncate flag (default is false) 
+.br
+\fIauto_flush\fP - Auto-flush flag (default is false) 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void CppLogging::FileAppender::AppendRecord (\fBRecord\fP & record)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Append the given logging record\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrecord\fP - Logging record 
+.RE
+.PP
+
+.PP
+Implements \fBCppLogging::Appender\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CppLogging from the source code\&.

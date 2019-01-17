@@ -1,0 +1,64 @@
+.TH "CppLogging::NullAppender" 3 "Thu Jan 17 2019" "CppLogging" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CppLogging::NullAppender \- Null appender\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <null_appender\&.h>\fP
+.PP
+Inherits \fBCppLogging::Appender\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNullAppender\fP (const \fBNullAppender\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBNullAppender\fP (\fBNullAppender\fP &&) noexcept=default"
+.br
+.ti -1c
+.RI "\fBNullAppender\fP & \fBoperator=\fP (const \fBNullAppender\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBNullAppender\fP & \fBoperator=\fP (\fBNullAppender\fP &&) noexcept=default"
+.br
+.ti -1c
+.RI "void \fBAppendRecord\fP (\fBRecord\fP &record) override"
+.br
+.RI "Append the given logging record\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Null appender\&. 
+
+Null appender does nothing with a given logging record\&.
+.PP
+Thread-safe\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void CppLogging::NullAppender::AppendRecord (\fBRecord\fP & record)\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Append the given logging record\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrecord\fP - Logging record 
+.RE
+.PP
+
+.PP
+Implements \fBCppLogging::Appender\fP\&.
+.PP
+.nf
+34 {}
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CppLogging from the source code\&.

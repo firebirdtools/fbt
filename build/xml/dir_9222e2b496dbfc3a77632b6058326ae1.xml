@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_9222e2b496dbfc3a77632b6058326ae1" kind="dir">
+    <compoundname>include/logging/filters</compoundname>
+    <innerfile refid="level__filter_8h">level_filter.h</innerfile>
+    <innerfile refid="logger__filter_8h">logger_filter.h</innerfile>
+    <innerfile refid="message__filter_8h">message_filter.h</innerfile>
+    <briefdescription>
+<para>A directory. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/logging/filters/"/>
+  </compounddef>
+</doxygen>

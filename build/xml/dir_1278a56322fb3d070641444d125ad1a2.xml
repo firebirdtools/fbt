@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_1278a56322fb3d070641444d125ad1a2" kind="dir">
+    <compoundname>include/deprecate</compoundname>
+    <innerfile refid="File_8h">File.h</innerfile>
+    <briefdescription>
+<para>A deprecated directory. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000001"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This directory is deprecated. </para>
+</xrefdescription></xrefsect></para>
+    </detaileddescription>
+    <location file="include/deprecate/"/>
+  </compounddef>
+</doxygen>

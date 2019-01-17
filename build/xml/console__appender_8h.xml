@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="console__appender_8h" kind="file" language="C++">
+    <compoundname>console_appender.h</compoundname>
+    <includes refid="appender_8h" local="yes">logging/appender.h</includes>
+    <includedby refid="appenders_8h" local="yes">include/logging/appenders.h</includedby>
+    <incdepgraph>
+      <node id="99">
+        <label>time/timestamp.h</label>
+      </node>
+      <node id="94">
+        <label>logging/level.h</label>
+        <link refid="level_8h"/>
+        <childnode refid="95" relation="include">
+        </childnode>
+      </node>
+      <node id="95">
+        <label>cstdint</label>
+      </node>
+      <node id="100">
+        <label>string</label>
+      </node>
+      <node id="103">
+        <label>record.inl</label>
+      </node>
+      <node id="97">
+        <label>string/format.h</label>
+      </node>
+      <node id="93">
+        <label>logging/record.h</label>
+        <link refid="record_8h"/>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+      </node>
+      <node id="92">
+        <label>logging/appender.h</label>
+        <link refid="appender_8h"/>
+        <childnode refid="93" relation="include">
+        </childnode>
+      </node>
+      <node id="91">
+        <label>include/logging/appenders/console_appender.h</label>
+        <link refid="console__appender_8h"/>
+        <childnode refid="92" relation="include">
+        </childnode>
+      </node>
+      <node id="101">
+        <label>vector</label>
+      </node>
+      <node id="102">
+        <label>utility</label>
+      </node>
+      <node id="98">
+        <label>threads/thread.h</label>
+      </node>
+      <node id="96">
+        <label>memory/memory.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="110">
+        <label>include/logging/config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="107">
+        <label>include/logging/processors/async_processor.h</label>
+        <link refid="async__processor_8h"/>
+        <childnode refid="108" relation="include">
+        </childnode>
+      </node>
+      <node id="109">
+        <label>include/logging/logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="110" relation="include">
+        </childnode>
+      </node>
+      <node id="108">
+        <label>include/logging/processors.h</label>
+        <link refid="processors_8h"/>
+        <childnode refid="109" relation="include">
+        </childnode>
+      </node>
+      <node id="104">
+        <label>include/logging/appenders/console_appender.h</label>
+        <link refid="console__appender_8h"/>
+        <childnode refid="105" relation="include">
+        </childnode>
+      </node>
+      <node id="106">
+        <label>include/logging/processor.h</label>
+        <link refid="processor_8h"/>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="111" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+      </node>
+      <node id="112">
+        <label>include/logging/processors/sync_processor.h</label>
+        <link refid="sync__processor_8h"/>
+        <childnode refid="108" relation="include">
+        </childnode>
+      </node>
+      <node id="105">
+        <label>include/logging/appenders.h</label>
+        <link refid="appenders_8h"/>
+        <childnode refid="106" relation="include">
+        </childnode>
+      </node>
+      <node id="111">
+        <label>include/logging/processors/buffered_processor.h</label>
+        <link refid="buffered__processor_8h"/>
+        <childnode refid="108" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classCppLogging_1_1ConsoleAppender" prot="public">CppLogging::ConsoleAppender</innerclass>
+    <innernamespace refid="namespaceCppLogging">CppLogging</innernamespace>
+    <briefdescription>
+<para>Console (stdout) appender definition. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Ivan Shynkarenka </para>
+</simplesect>
+<simplesect kind="date"><para>26.07.2016 </para>
+</simplesect>
+<simplesect kind="copyright"><para>MIT License </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="include/logging/appenders/console_appender.h"/>
+  </compounddef>
+</doxygen>

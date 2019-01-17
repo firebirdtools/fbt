@@ -1,0 +1,115 @@
+.TH "CppLogging::BufferedProcessor" 3 "Thu Jan 17 2019" "CppLogging" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CppLogging::BufferedProcessor \- Buffered logging processor\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <buffered_processor\&.h>\fP
+.PP
+Inherits \fBCppLogging::Processor\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBufferedProcessor\fP (size_t limit=65536, size_t capacity=4096)"
+.br
+.RI "Initialize buffered processor with the given limit and capacity\&. "
+.ti -1c
+.RI "\fBBufferedProcessor\fP (const \fBBufferedProcessor\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBBufferedProcessor\fP (\fBBufferedProcessor\fP &&) noexcept=default"
+.br
+.ti -1c
+.RI "\fBBufferedProcessor\fP & \fBoperator=\fP (const \fBBufferedProcessor\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBBufferedProcessor\fP & \fBoperator=\fP (\fBBufferedProcessor\fP &&) noexcept=default"
+.br
+.ti -1c
+.RI "bool \fBProcessRecord\fP (\fBRecord\fP &record) override"
+.br
+.RI "Process the given logging record through all child filters, layouts and appenders\&. "
+.ti -1c
+.RI "void \fBFlush\fP () override"
+.br
+.RI "Flush the current logging processor\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Buffered logging processor\&. 
+
+Buffered logging processor stores all logging records in the limited size buffer until \fBFlush()\fP method is invoked or buffer has not enough space\&.
+.PP
+Please note that buffered logging processor moves the given logging record (\fBProcessRecord()\fP method always returns false) into the buffer!
+.PP
+Not thread-safe\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CppLogging::BufferedProcessor::BufferedProcessor (size_t limit = \fC65536\fP, size_t capacity = \fC4096\fP)\fC [inline]\fP, \fC [explicit]\fP"
+
+.PP
+Initialize buffered processor with the given limit and capacity\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlimit\fP - Buffer limit in logging records (default is 65536) 
+.br
+\fIcapacity\fP - Buffer initial capacity in logging records (default is 4096) 
+.RE
+.PP
+
+.PP
+.nf
+36                                                                              : _limit(limit)
+37     { _buffer\&.reserve(capacity); }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void CppLogging::BufferedProcessor::Flush ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Flush the current logging processor\&. Default behavior of the method will flush in the following sequence:
+.IP "\(bu" 2
+all appenders (if any present)
+.IP "\(bu" 2
+all sub processors (if any present) 
+.PP
+
+.PP
+Reimplemented from \fBCppLogging::Processor\fP\&.
+.SS "bool CppLogging::BufferedProcessor::ProcessRecord (\fBRecord\fP & record)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Process the given logging record through all child filters, layouts and appenders\&. Default behavior of the method will take the given logging record and process it in the following sequence:
+.IP "\(bu" 2
+all filters (if any present)
+.IP "\(bu" 2
+all layouts (if any present)
+.IP "\(bu" 2
+all appenders (if any present)
+.IP "\(bu" 2
+all sub processors (if any present)
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrecord\fP - Logging record 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+'true' if the logging record was successfully processed, 'false' if the logging record was filtered out 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBCppLogging::Processor\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CppLogging from the source code\&.

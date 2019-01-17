@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="syslog__appender_8h" kind="file" language="C++">
+    <compoundname>syslog_appender.h</compoundname>
+    <includes refid="appender_8h" local="yes">logging/appender.h</includes>
+    <includedby refid="appenders_8h" local="yes">include/logging/appenders.h</includedby>
+    <incdepgraph>
+      <node id="281">
+        <label>time/timestamp.h</label>
+      </node>
+      <node id="276">
+        <label>logging/level.h</label>
+        <link refid="level_8h"/>
+        <childnode refid="277" relation="include">
+        </childnode>
+      </node>
+      <node id="277">
+        <label>cstdint</label>
+      </node>
+      <node id="282">
+        <label>string</label>
+      </node>
+      <node id="285">
+        <label>record.inl</label>
+      </node>
+      <node id="279">
+        <label>string/format.h</label>
+      </node>
+      <node id="275">
+        <label>logging/record.h</label>
+        <link refid="record_8h"/>
+        <childnode refid="276" relation="include">
+        </childnode>
+        <childnode refid="278" relation="include">
+        </childnode>
+        <childnode refid="279" relation="include">
+        </childnode>
+        <childnode refid="280" relation="include">
+        </childnode>
+        <childnode refid="281" relation="include">
+        </childnode>
+        <childnode refid="282" relation="include">
+        </childnode>
+        <childnode refid="283" relation="include">
+        </childnode>
+        <childnode refid="284" relation="include">
+        </childnode>
+        <childnode refid="285" relation="include">
+        </childnode>
+      </node>
+      <node id="274">
+        <label>logging/appender.h</label>
+        <link refid="appender_8h"/>
+        <childnode refid="275" relation="include">
+        </childnode>
+      </node>
+      <node id="283">
+        <label>vector</label>
+      </node>
+      <node id="284">
+        <label>utility</label>
+      </node>
+      <node id="280">
+        <label>threads/thread.h</label>
+      </node>
+      <node id="273">
+        <label>include/logging/appenders/syslog_appender.h</label>
+        <link refid="syslog__appender_8h"/>
+        <childnode refid="274" relation="include">
+        </childnode>
+      </node>
+      <node id="278">
+        <label>memory/memory.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="292">
+        <label>include/logging/config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="289">
+        <label>include/logging/processors/async_processor.h</label>
+        <link refid="async__processor_8h"/>
+        <childnode refid="290" relation="include">
+        </childnode>
+      </node>
+      <node id="291">
+        <label>include/logging/logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="292" relation="include">
+        </childnode>
+      </node>
+      <node id="290">
+        <label>include/logging/processors.h</label>
+        <link refid="processors_8h"/>
+        <childnode refid="291" relation="include">
+        </childnode>
+      </node>
+      <node id="288">
+        <label>include/logging/processor.h</label>
+        <link refid="processor_8h"/>
+        <childnode refid="289" relation="include">
+        </childnode>
+        <childnode refid="293" relation="include">
+        </childnode>
+        <childnode refid="294" relation="include">
+        </childnode>
+      </node>
+      <node id="294">
+        <label>include/logging/processors/sync_processor.h</label>
+        <link refid="sync__processor_8h"/>
+        <childnode refid="290" relation="include">
+        </childnode>
+      </node>
+      <node id="287">
+        <label>include/logging/appenders.h</label>
+        <link refid="appenders_8h"/>
+        <childnode refid="288" relation="include">
+        </childnode>
+      </node>
+      <node id="293">
+        <label>include/logging/processors/buffered_processor.h</label>
+        <link refid="buffered__processor_8h"/>
+        <childnode refid="290" relation="include">
+        </childnode>
+      </node>
+      <node id="286">
+        <label>include/logging/appenders/syslog_appender.h</label>
+        <link refid="syslog__appender_8h"/>
+        <childnode refid="287" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classCppLogging_1_1SyslogAppender" prot="public">CppLogging::SyslogAppender</innerclass>
+    <innernamespace refid="namespaceCppLogging">CppLogging</innernamespace>
+    <briefdescription>
+<para>Syslog appender definition. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Ivan Shynkarenka </para>
+</simplesect>
+<simplesect kind="date"><para>28.07.2016 </para>
+</simplesect>
+<simplesect kind="copyright"><para>MIT License </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="include/logging/appenders/syslog_appender.h"/>
+  </compounddef>
+</doxygen>

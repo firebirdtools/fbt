@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="electron-help" kind="page">
+    <compoundname>electron-help</compoundname>
+    <title>Electron help</title>
+    <innerpage refid="electron-install">Electron install</innerpage>
+    <innerpage refid="electron-npm">Electron npm</innerpage>
+    <briefdescription>
+<para>Get started with Electron in matter of minutes. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Get started with Electron in matter of minutes.</para>
+<para><itemizedlist>
+<listitem><para><ref refid="electron-install" kindref="compound">Electron install</ref></para>
+</listitem><listitem><para><ref refid="electron-npm" kindref="compound">Electron npm</ref> </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

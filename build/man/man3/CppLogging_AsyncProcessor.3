@@ -1,0 +1,114 @@
+.TH "CppLogging::AsyncProcessor" 3 "Thu Jan 17 2019" "CppLogging" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CppLogging::AsyncProcessor \- Asynchronous logging processor\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <async_processor\&.h>\fP
+.PP
+Inherits \fBCppLogging::Processor\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAsyncProcessor\fP (bool discard_on_overflow=false, size_t capacity=4096, const std::function< void()> &on_thread_initialize=[](){}, const std::function< void()> &on_thread_clenup=[](){})"
+.br
+.RI "Initialize asynchronous processor with the given overflow policy and buffer capacity\&. "
+.ti -1c
+.RI "\fBAsyncProcessor\fP (const \fBAsyncProcessor\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBAsyncProcessor\fP (\fBAsyncProcessor\fP &&)=default"
+.br
+.ti -1c
+.RI "\fBAsyncProcessor\fP & \fBoperator=\fP (const \fBAsyncProcessor\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBAsyncProcessor\fP & \fBoperator=\fP (\fBAsyncProcessor\fP &&)=default"
+.br
+.ti -1c
+.RI "bool \fBProcessRecord\fP (\fBRecord\fP &record) override"
+.br
+.RI "Process the given logging record through all child filters, layouts and appenders\&. "
+.ti -1c
+.RI "void \fBFlush\fP () override"
+.br
+.RI "Flush the current logging processor\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Asynchronous logging processor\&. 
+
+Asynchronous logging processor stores the given logging record into thread-safe buffer and process it in the separate thread\&.
+.PP
+Please note that asynchronous logging processor moves the given logging record (\fBProcessRecord()\fP method always returns false) into the buffer!
+.PP
+Thread-safe\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CppLogging::AsyncProcessor::AsyncProcessor (bool discard_on_overflow = \fCfalse\fP, size_t capacity = \fC4096\fP, const std::function< void()> & on_thread_initialize = \fC[](){}\fP, const std::function< void()> & on_thread_clenup = \fC[](){}\fP)\fC [explicit]\fP"
+
+.PP
+Initialize asynchronous processor with the given overflow policy and buffer capacity\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdiscard_on_overflow\fP - Discard logging records on buffer overflow or block and wait (default is false) 
+.br
+\fIcapacity\fP - Buffer capacity in logging records (default is 4096) 
+.br
+\fIon_thread_initialize\fP - Thread initialize handler can be used to initialize priority or affinity of the logging thread (default does nothing) 
+.br
+\fIon_thread_clenup\fP - Thread initialize handler can be used to cleanup priority or affinity of the logging thread (default does nothing) 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void CppLogging::AsyncProcessor::Flush ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Flush the current logging processor\&. Default behavior of the method will flush in the following sequence:
+.IP "\(bu" 2
+all appenders (if any present)
+.IP "\(bu" 2
+all sub processors (if any present) 
+.PP
+
+.PP
+Reimplemented from \fBCppLogging::Processor\fP\&.
+.SS "bool CppLogging::AsyncProcessor::ProcessRecord (\fBRecord\fP & record)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Process the given logging record through all child filters, layouts and appenders\&. Default behavior of the method will take the given logging record and process it in the following sequence:
+.IP "\(bu" 2
+all filters (if any present)
+.IP "\(bu" 2
+all layouts (if any present)
+.IP "\(bu" 2
+all appenders (if any present)
+.IP "\(bu" 2
+all sub processors (if any present)
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrecord\fP - Logging record 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+'true' if the logging record was successfully processed, 'false' if the logging record was filtered out 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBCppLogging::Processor\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CppLogging from the source code\&.

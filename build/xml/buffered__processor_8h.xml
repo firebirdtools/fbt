@@ -1,0 +1,303 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="buffered__processor_8h" kind="file" language="C++">
+    <compoundname>buffered_processor.h</compoundname>
+    <includes refid="processor_8h" local="yes">logging/processor.h</includes>
+    <includedby refid="processors_8h" local="yes">include/logging/processors.h</includedby>
+    <incdepgraph>
+      <node id="851">
+        <label>atomic</label>
+      </node>
+      <node id="850">
+        <label>logging/filter.h</label>
+        <link refid="filter_8h"/>
+        <childnode refid="826" relation="include">
+        </childnode>
+      </node>
+      <node id="832">
+        <label>time/timestamp.h</label>
+      </node>
+      <node id="842">
+        <label>logging/appenders/memory_appender.h</label>
+        <link refid="memory__appender_8h"/>
+        <childnode refid="825" relation="include">
+        </childnode>
+      </node>
+      <node id="827">
+        <label>logging/level.h</label>
+        <link refid="level_8h"/>
+        <childnode refid="828" relation="include">
+        </childnode>
+      </node>
+      <node id="828">
+        <label>cstdint</label>
+      </node>
+      <node id="824">
+        <label>logging/appenders/null_appender.h</label>
+        <link refid="null__appender_8h"/>
+        <childnode refid="825" relation="include">
+        </childnode>
+      </node>
+      <node id="857">
+        <label>logging/layouts/binary_layout.h</label>
+        <link refid="binary__layout_8h"/>
+        <childnode refid="858" relation="include">
+        </childnode>
+      </node>
+      <node id="858">
+        <label>logging/layout.h</label>
+        <link refid="layout_8h"/>
+        <childnode refid="826" relation="include">
+        </childnode>
+      </node>
+      <node id="833">
+        <label>string</label>
+      </node>
+      <node id="836">
+        <label>record.inl</label>
+      </node>
+      <node id="853">
+        <label>regex</label>
+      </node>
+      <node id="830">
+        <label>string/format.h</label>
+      </node>
+      <node id="826">
+        <label>logging/record.h</label>
+        <link refid="record_8h"/>
+        <childnode refid="827" relation="include">
+        </childnode>
+        <childnode refid="829" relation="include">
+        </childnode>
+        <childnode refid="830" relation="include">
+        </childnode>
+        <childnode refid="831" relation="include">
+        </childnode>
+        <childnode refid="832" relation="include">
+        </childnode>
+        <childnode refid="833" relation="include">
+        </childnode>
+        <childnode refid="834" relation="include">
+        </childnode>
+        <childnode refid="835" relation="include">
+        </childnode>
+        <childnode refid="836" relation="include">
+        </childnode>
+      </node>
+      <node id="856">
+        <label>logging/layouts.h</label>
+        <link refid="layouts_8h"/>
+        <childnode refid="857" relation="include">
+        </childnode>
+        <childnode refid="859" relation="include">
+        </childnode>
+      </node>
+      <node id="825">
+        <label>logging/appender.h</label>
+        <link refid="appender_8h"/>
+        <childnode refid="826" relation="include">
+        </childnode>
+      </node>
+      <node id="852">
+        <label>logging/filters/logger_filter.h</label>
+        <link refid="logger__filter_8h"/>
+        <childnode refid="850" relation="include">
+        </childnode>
+        <childnode refid="853" relation="include">
+        </childnode>
+      </node>
+      <node id="848">
+        <label>logging/filters.h</label>
+        <link refid="filters_8h"/>
+        <childnode refid="849" relation="include">
+        </childnode>
+        <childnode refid="852" relation="include">
+        </childnode>
+        <childnode refid="854" relation="include">
+        </childnode>
+        <childnode refid="855" relation="include">
+        </childnode>
+      </node>
+      <node id="837">
+        <label>logging/appenders/console_appender.h</label>
+        <link refid="console__appender_8h"/>
+        <childnode refid="825" relation="include">
+        </childnode>
+      </node>
+      <node id="859">
+        <label>logging/layouts/text_layout.h</label>
+        <link refid="text__layout_8h"/>
+        <childnode refid="858" relation="include">
+        </childnode>
+        <childnode refid="846" relation="include">
+        </childnode>
+        <childnode refid="833" relation="include">
+        </childnode>
+      </node>
+      <node id="839">
+        <label>logging/appenders/error_appender.h</label>
+        <link refid="error__appender_8h"/>
+        <childnode refid="825" relation="include">
+        </childnode>
+      </node>
+      <node id="845">
+        <label>logging/appenders/rolling_file_appender.h</label>
+        <link refid="rolling__file__appender_8h"/>
+        <childnode refid="825" relation="include">
+        </childnode>
+        <childnode refid="841" relation="include">
+        </childnode>
+        <childnode refid="846" relation="include">
+        </childnode>
+      </node>
+      <node id="840">
+        <label>logging/appenders/file_appender.h</label>
+        <link refid="file__appender_8h"/>
+        <childnode refid="825" relation="include">
+        </childnode>
+        <childnode refid="841" relation="include">
+        </childnode>
+      </node>
+      <node id="822">
+        <label>logging/processor.h</label>
+        <link refid="processor_8h"/>
+        <childnode refid="823" relation="include">
+        </childnode>
+        <childnode refid="848" relation="include">
+        </childnode>
+        <childnode refid="856" relation="include">
+        </childnode>
+      </node>
+      <node id="849">
+        <label>logging/trigger.h</label>
+        <link refid="trigger_8h"/>
+        <childnode refid="850" relation="include">
+        </childnode>
+        <childnode refid="851" relation="include">
+        </childnode>
+      </node>
+      <node id="834">
+        <label>vector</label>
+      </node>
+      <node id="835">
+        <label>utility</label>
+      </node>
+      <node id="823">
+        <label>logging/appenders.h</label>
+        <link refid="appenders_8h"/>
+        <childnode refid="824" relation="include">
+        </childnode>
+        <childnode refid="837" relation="include">
+        </childnode>
+        <childnode refid="838" relation="include">
+        </childnode>
+        <childnode refid="839" relation="include">
+        </childnode>
+        <childnode refid="840" relation="include">
+        </childnode>
+        <childnode refid="842" relation="include">
+        </childnode>
+        <childnode refid="843" relation="include">
+        </childnode>
+        <childnode refid="845" relation="include">
+        </childnode>
+        <childnode refid="847" relation="include">
+        </childnode>
+      </node>
+      <node id="821">
+        <label>include/logging/processors/buffered_processor.h</label>
+        <link refid="buffered__processor_8h"/>
+        <childnode refid="822" relation="include">
+        </childnode>
+      </node>
+      <node id="838">
+        <label>logging/appenders/debug_appender.h</label>
+        <link refid="debug__appender_8h"/>
+        <childnode refid="825" relation="include">
+        </childnode>
+      </node>
+      <node id="844">
+        <label>iostream</label>
+      </node>
+      <node id="854">
+        <label>logging/filters/level_filter.h</label>
+        <link refid="level__filter_8h"/>
+        <childnode refid="850" relation="include">
+        </childnode>
+      </node>
+      <node id="843">
+        <label>logging/appenders/ostream_appender.h</label>
+        <link refid="ostream__appender_8h"/>
+        <childnode refid="825" relation="include">
+        </childnode>
+        <childnode refid="844" relation="include">
+        </childnode>
+      </node>
+      <node id="831">
+        <label>threads/thread.h</label>
+      </node>
+      <node id="847">
+        <label>logging/appenders/syslog_appender.h</label>
+        <link refid="syslog__appender_8h"/>
+        <childnode refid="825" relation="include">
+        </childnode>
+      </node>
+      <node id="855">
+        <label>logging/filters/message_filter.h</label>
+        <link refid="message__filter_8h"/>
+        <childnode refid="850" relation="include">
+        </childnode>
+        <childnode refid="853" relation="include">
+        </childnode>
+      </node>
+      <node id="829">
+        <label>memory/memory.h</label>
+      </node>
+      <node id="841">
+        <label>filesystem/filesystem.h</label>
+      </node>
+      <node id="846">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="863">
+        <label>include/logging/config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="862">
+        <label>include/logging/logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="863" relation="include">
+        </childnode>
+      </node>
+      <node id="861">
+        <label>include/logging/processors.h</label>
+        <link refid="processors_8h"/>
+        <childnode refid="862" relation="include">
+        </childnode>
+      </node>
+      <node id="860">
+        <label>include/logging/processors/buffered_processor.h</label>
+        <link refid="buffered__processor_8h"/>
+        <childnode refid="861" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classCppLogging_1_1BufferedProcessor" prot="public">CppLogging::BufferedProcessor</innerclass>
+    <innernamespace refid="namespaceCppLogging">CppLogging</innernamespace>
+    <briefdescription>
+<para>Buffered logging processor definition. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Ivan Shynkarenka </para>
+</simplesect>
+<simplesect kind="date"><para>28.07.2016 </para>
+</simplesect>
+<simplesect kind="copyright"><para>MIT License </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="include/logging/processors/buffered_processor.h"/>
+  </compounddef>
+</doxygen>

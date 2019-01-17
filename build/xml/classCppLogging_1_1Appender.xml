@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="classCppLogging_1_1Appender" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>CppLogging::Appender</compoundname>
+    <derivedcompoundref refid="classCppLogging_1_1ConsoleAppender" prot="public" virt="non-virtual">CppLogging::ConsoleAppender</derivedcompoundref>
+    <derivedcompoundref refid="classCppLogging_1_1DebugAppender" prot="public" virt="non-virtual">CppLogging::DebugAppender</derivedcompoundref>
+    <derivedcompoundref refid="classCppLogging_1_1ErrorAppender" prot="public" virt="non-virtual">CppLogging::ErrorAppender</derivedcompoundref>
+    <derivedcompoundref refid="classCppLogging_1_1FileAppender" prot="public" virt="non-virtual">CppLogging::FileAppender</derivedcompoundref>
+    <derivedcompoundref refid="classCppLogging_1_1MemoryAppender" prot="public" virt="non-virtual">CppLogging::MemoryAppender</derivedcompoundref>
+    <derivedcompoundref refid="classCppLogging_1_1NullAppender" prot="public" virt="non-virtual">CppLogging::NullAppender</derivedcompoundref>
+    <derivedcompoundref refid="classCppLogging_1_1OstreamAppender" prot="public" virt="non-virtual">CppLogging::OstreamAppender</derivedcompoundref>
+    <derivedcompoundref refid="classCppLogging_1_1RollingFileAppender" prot="public" virt="non-virtual">CppLogging::RollingFileAppender</derivedcompoundref>
+    <derivedcompoundref refid="classCppLogging_1_1SyslogAppender" prot="public" virt="non-virtual">CppLogging::SyslogAppender</derivedcompoundref>
+    <includes refid="appender_8h" local="no">appender.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCppLogging_1_1Appender_1a770dfe9cd6d1f22a66582bed758a7b4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void CppLogging::Appender::AppendRecord</definition>
+        <argsstring>(Record &amp;record)=0</argsstring>
+        <name>AppendRecord</name>
+        <reimplementedby refid="classCppLogging_1_1NullAppender_1a478c75b951fdb94a9c213b8178547bfc">AppendRecord</reimplementedby>
+        <reimplementedby refid="classCppLogging_1_1SyslogAppender_1a3c5cd33276c4ce242346c1435ef3e744">AppendRecord</reimplementedby>
+        <reimplementedby refid="classCppLogging_1_1ErrorAppender_1a5598abd605f3e925beb2f6ff615c1bca">AppendRecord</reimplementedby>
+        <reimplementedby refid="classCppLogging_1_1ConsoleAppender_1a72ac6a2cf031215cdaaf9043e24f5e0a">AppendRecord</reimplementedby>
+        <reimplementedby refid="classCppLogging_1_1DebugAppender_1a18b6456537f6321a60810a6e3155e831">AppendRecord</reimplementedby>
+        <reimplementedby refid="classCppLogging_1_1OstreamAppender_1a4e52c9852f9cba101ad46864fa40910d">AppendRecord</reimplementedby>
+        <reimplementedby refid="classCppLogging_1_1MemoryAppender_1ab8864deaf25ed3545174e47cc2d6e06f">AppendRecord</reimplementedby>
+        <reimplementedby refid="classCppLogging_1_1FileAppender_1acb3fe3e3440c8e15f0016c83ed7f4e05">AppendRecord</reimplementedby>
+        <reimplementedby refid="classCppLogging_1_1RollingFileAppender_1a5d4b2e45b751819063a6e9c5edd81bbf">AppendRecord</reimplementedby>
+        <param>
+          <type><ref refid="classCppLogging_1_1Record" kindref="compound">Record</ref> &amp;</type>
+          <declname>record</declname>
+        </param>
+        <briefdescription>
+<para>Append the given logging record. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>record</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Logging record </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/appender.h" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCppLogging_1_1Appender_1a6f6ebd942c5045e8b07d100fe5656ee6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void CppLogging::Appender::Flush</definition>
+        <argsstring>()</argsstring>
+        <name>Flush</name>
+        <reimplementedby refid="classCppLogging_1_1ErrorAppender_1aaf4aa3277fb071417747dfdd2b217b9a">Flush</reimplementedby>
+        <reimplementedby refid="classCppLogging_1_1ConsoleAppender_1a367e0bbea5db1481eb55839a2e0da85f">Flush</reimplementedby>
+        <reimplementedby refid="classCppLogging_1_1DebugAppender_1a0e68133c51712cf186cea65ea8e4ddb6">Flush</reimplementedby>
+        <reimplementedby refid="classCppLogging_1_1OstreamAppender_1af3202617e482d60b4d6914616a7ca843">Flush</reimplementedby>
+        <reimplementedby refid="classCppLogging_1_1FileAppender_1acedc510219d9faaf3e0f64e9134027f4">Flush</reimplementedby>
+        <reimplementedby refid="classCppLogging_1_1RollingFileAppender_1abe1e794f13149844125945f1a7c2325d">Flush</reimplementedby>
+        <briefdescription>
+<para>Flush the logging appender. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/logging/appender.h" line="41" column="1" bodyfile="include/logging/appender.h" bodystart="41" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Logging appender interface. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Logging appender takes an instance of a single logging record and store it content in some storage or show it in console.</para>
+<para><simplesect kind="see"><para><ref refid="classCppLogging_1_1NullAppender" kindref="compound">NullAppender</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classCppLogging_1_1ConsoleAppender" kindref="compound">ConsoleAppender</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classCppLogging_1_1DebugAppender" kindref="compound">DebugAppender</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classCppLogging_1_1ErrorAppender" kindref="compound">ErrorAppender</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classCppLogging_1_1MemoryAppender" kindref="compound">MemoryAppender</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classCppLogging_1_1OstreamAppender" kindref="compound">OstreamAppender</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classCppLogging_1_1FileAppender" kindref="compound">FileAppender</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classCppLogging_1_1RollingFileAppender" kindref="compound">RollingFileAppender</ref> </para>
+</simplesect>
+<simplesect kind="see"><para>SysLogAppender </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="7">
+        <label>CppLogging::OstreamAppender</label>
+        <link refid="classCppLogging_1_1OstreamAppender"/>
+        <childnode refid="0" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CppLogging::DebugAppender</label>
+        <link refid="classCppLogging_1_1DebugAppender"/>
+        <childnode refid="0" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>CppLogging::ConsoleAppender</label>
+        <link refid="classCppLogging_1_1ConsoleAppender"/>
+        <childnode refid="0" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>CppLogging::MemoryAppender</label>
+        <link refid="classCppLogging_1_1MemoryAppender"/>
+        <childnode refid="0" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>CppLogging::SyslogAppender</label>
+        <link refid="classCppLogging_1_1SyslogAppender"/>
+        <childnode refid="0" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>CppLogging::FileAppender</label>
+        <link refid="classCppLogging_1_1FileAppender"/>
+        <childnode refid="0" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="0">
+        <label>CppLogging::Appender</label>
+        <link refid="classCppLogging_1_1Appender"/>
+      </node>
+      <node id="8">
+        <label>CppLogging::RollingFileAppender</label>
+        <link refid="classCppLogging_1_1RollingFileAppender"/>
+        <childnode refid="0" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>CppLogging::ErrorAppender</label>
+        <link refid="classCppLogging_1_1ErrorAppender"/>
+        <childnode refid="0" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>CppLogging::NullAppender</label>
+        <link refid="classCppLogging_1_1NullAppender"/>
+        <childnode refid="0" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="include/logging/appender.h" line="32" column="1" bodyfile="include/logging/appender.h" bodystart="31" bodyend="42"/>
+    <listofallmembers>
+      <member refid="classCppLogging_1_1Appender_1a770dfe9cd6d1f22a66582bed758a7b4e" prot="public" virt="pure-virtual"><scope>CppLogging::Appender</scope><name>AppendRecord</name></member>
+      <member refid="classCppLogging_1_1Appender_1a6f6ebd942c5045e8b07d100fe5656ee6" prot="public" virt="virtual"><scope>CppLogging::Appender</scope><name>Flush</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

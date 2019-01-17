@@ -1,0 +1,106 @@
+.TH "CppLogging::LevelFilter" 3 "Thu Jan 17 2019" "CppLogging" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CppLogging::LevelFilter \- Level filter\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <level_filter\&.h>\fP
+.PP
+Inherits \fBCppLogging::Filter\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLevelFilter\fP (\fBLevel\fP level)"
+.br
+.RI "Initialize level filter with a given level value\&. "
+.ti -1c
+.RI "\fBLevelFilter\fP (\fBLevel\fP from, \fBLevel\fP to)"
+.br
+.RI "Initialize level filter with a given level range\&. "
+.ti -1c
+.RI "\fBLevelFilter\fP (const \fBLevelFilter\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBLevelFilter\fP (\fBLevelFilter\fP &&) noexcept=default"
+.br
+.ti -1c
+.RI "\fBLevelFilter\fP & \fBoperator=\fP (const \fBLevelFilter\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBLevelFilter\fP & \fBoperator=\fP (\fBLevelFilter\fP &&) noexcept=default"
+.br
+.ti -1c
+.RI "bool \fBFilterRecord\fP (\fBRecord\fP &record) override"
+.br
+.RI "\fBFilter\fP the given logging record\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Level filter\&. 
+
+Level filters out logging records which level filed is not matched to the given level value or range\&.
+.PP
+Thread-safe\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CppLogging::LevelFilter::LevelFilter (\fBLevel\fP level)\fC [inline]\fP, \fC [explicit]\fP"
+
+.PP
+Initialize level filter with a given level value\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlevel\fP - Level value 
+.RE
+.PP
+
+.PP
+.nf
+30 : _from(level), _to(level) {}
+.fi
+.SS "CppLogging::LevelFilter::LevelFilter (\fBLevel\fP from, \fBLevel\fP to)\fC [inline]\fP, \fC [explicit]\fP"
+
+.PP
+Initialize level filter with a given level range\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfrom\fP - Level from value 
+.br
+\fIto\fP - Level to value 
+.RE
+.PP
+
+.PP
+.nf
+36 : _from(from), _to(to) {}
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "bool CppLogging::LevelFilter::FilterRecord (\fBRecord\fP & record)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBFilter\fP the given logging record\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrecord\fP - Logging record 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+'true' if the logging record should be processed, 'false' if the logging record was filtered out 
+.RE
+.PP
+
+.PP
+Implements \fBCppLogging::Filter\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CppLogging from the source code\&.
