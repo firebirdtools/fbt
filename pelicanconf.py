@@ -70,7 +70,7 @@ M_BLOG_NAME = "fbt example articles"
 M_BLOG_URL = 'examples/'
 
 #M_FAVICON = ('favicon.ico', 'image/x-icon')
-M_FAVICON = ('firebird.png')
+M_FAVICON = ('firebird.png', 'image/x-icon')
 
 M_SOCIAL_TWITTER_SITE = '@czmosra'
 M_SOCIAL_TWITTER_SITE_ID = 1537427036
